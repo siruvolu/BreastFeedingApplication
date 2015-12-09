@@ -1,19 +1,27 @@
 //
-//  SecondViewController.m
+//  SignUpViewController.m
 //  BreastFeedingApplication
 //
-//  Created by Kancharla, Soumya on 16/11/15.
-//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
+//  Created by Balasubramanian, Srinivas B on 12/8/15.
+//  Copyright © 2015 Prateek Panjwani. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "SignUpViewController.h"
 #import "LoginViewController.h"
 
-@interface SecondViewController ()
+
+@interface SignupViewController ()
 
 @end
 
-@implementation SecondViewController
+
+@implementation SignupViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+}
 
 
 - (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -32,14 +40,7 @@
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
         
         [alert addAction:defaultAction];
-        
-        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
         [self presentViewController:alert animated:YES completion:nil];
-
-        //[self presentViewController:alert animated:YES completion:nil];
         
     }
     
@@ -80,12 +81,6 @@
     
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
     [success addAction:defaultAction];
-    
-    [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
-    
     [self presentViewController:success animated:YES completion:nil];
     [self navRef];
 }
@@ -121,15 +116,5 @@
  }
  */
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
+

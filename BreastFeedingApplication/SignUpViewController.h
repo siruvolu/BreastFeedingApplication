@@ -1,16 +1,14 @@
 //
-//  SecondViewController.h
+//  SignUpViewController.h
 //  BreastFeedingApplication
 //
-//  Created by Kancharla, Soumya on 16/11/15.
-//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
+//  Created by Balasubramanian, Srinivas B on 12/8/15.
+//  Copyright © 2015 Prateek Panjwani. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
-
+@interface SignupViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *submitbtn;
 @property (weak, nonatomic) IBOutlet UITextField *mothername;
@@ -24,9 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 @property (weak, nonatomic) IBOutlet UITextField *reenterpwd;
 
-//- (IBAction)submitfrnew:(id)sender;
+- (IBAction)submitfrnew:(id)sender;
 
 //- (IBAction)submitfrnew:(id)sender;
 @end
-
-

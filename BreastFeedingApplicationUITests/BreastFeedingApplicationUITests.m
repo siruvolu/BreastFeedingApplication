@@ -2,8 +2,8 @@
 //  BreastFeedingApplicationUITests.m
 //  BreastFeedingApplicationUITests
 //
-//  Created by Prateek Panjwani on 16/11/15.
-//  Copyright © 2015 Prateek Panjwani. All rights reserved.
+//  Created by Kancharla, Soumya on 16/11/15.
+//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044172381C180C510059A7E2 /* LatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172371C180C510059A7E2 /* LatchViewController.m */; };
+		0441724A1C181D720059A7E2 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172471C181D720059A7E2 /* Color.m */; };
+		0441724B1C181D720059A7E2 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172491C181D720059A7E2 /* LineChart.m */; };
+		0441724D1C1826A90059A7E2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0441724C1C1826A90059A7E2 /* MessageUI.framework */; };
 		80E1615A1BF9FAA0005460C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161591BF9FAA0005460C7 /* main.m */; };
 		80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615C1BF9FAA0005460C7 /* AppDelegate.m */; };
 		80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615F1BF9FAA0005460C7 /* FirstViewController.m */; };
@@ -16,6 +20,23 @@
 		80E1616B1BF9FAA0005460C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E161691BF9FAA0005460C7 /* LaunchScreen.storyboard */; };
 		80E161761BF9FAA1005460C7 /* BreastFeedingApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161751BF9FAA1005460C7 /* BreastFeedingApplicationTests.m */; };
 		80E161811BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161801BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m */; };
+		80E161901BF9FB9A005460C7 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1618F1BF9FB9A005460C7 /* GraphViewController.m */; };
+		80E161931BF9FBD4005460C7 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161921BF9FBD4005460C7 /* ContactViewController.m */; };
+		80E161961BF9FC04005460C7 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161951BF9FC04005460C7 /* QuoteViewController.m */; };
+		80E161991BF9FC20005460C7 /* FaqViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161981BF9FC20005460C7 /* FaqViewController.m */; };
+		AE3FA8F61C04A11700EAE29A /* bfeed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AE3FA8F51C04A11700EAE29A /* bfeed.sqlite */; };
+		AE3FA8F81C04A3D300EAE29A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3FA8F71C04A3D300EAE29A /* libsqlite3.tbd */; };
+		AE3FA8FA1C04A43A00EAE29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3FA8F91C04A43A00EAE29A /* Foundation.framework */; };
+		AE3FA9021C04A68500EAE29A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3FA9011C04A68500EAE29A /* UIKit.framework */; };
+		AE3FA90E1C04A9A000EAE29A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA9051C04A9A000EAE29A /* FMDatabase.m */; };
+		AE3FA90F1C04A9A000EAE29A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA9071C04A9A000EAE29A /* FMResultSet.m */; };
+		AE3FA9101C04A9A000EAE29A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA9091C04A9A000EAE29A /* FMDatabaseQueue.m */; };
+		AE3FA9111C04A9A000EAE29A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA90B1C04A9A000EAE29A /* FMDatabaseAdditions.m */; };
+		AE3FA9121C04A9A000EAE29A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA90D1C04A9A000EAE29A /* FMDatabasePool.m */; };
+		AE461B981C048D63004DEEB6 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE461B971C048D63004DEEB6 /* DataModel.m */; };
+		AE461BB21C048D74004DEEB6 /* Syncdata.m in Sources */ = {isa = PBXBuildFile; fileRef = AE461BA01C048D74004DEEB6 /* Syncdata.m */; };
+		DD0C8B971C17DC81004B0320 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C8B961C17DC81004B0320 /* LoginViewController.m */; };
+		DD0C8B9A1C17E01E004B0320 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C8B991C17E01E004B0320 /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044172361C180C510059A7E2 /* LatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatchViewController.h; sourceTree = "<group>"; };
+		044172371C180C510059A7E2 /* LatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatchViewController.m; sourceTree = "<group>"; };
+		044172461C181D720059A7E2 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		044172471C181D720059A7E2 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		044172481C181D720059A7E2 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
+		044172491C181D720059A7E2 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
+		0441724C1C1826A90059A7E2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastFeedingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161591BF9FAA0005460C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80E1615B1BF9FAA0005460C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +82,37 @@
 		80E1617C1BF9FAA1005460C7 /* BreastFeedingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreastFeedingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161801BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreastFeedingApplicationUITests.m; sourceTree = "<group>"; };
 		80E161821BF9FAA1005460C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80E1618E1BF9FB9A005460C7 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		80E1618F1BF9FB9A005460C7 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		80E161911BF9FBD4005460C7 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		80E161921BF9FBD4005460C7 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		80E161941BF9FC04005460C7 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		80E161951BF9FC04005460C7 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
+		80E161971BF9FC20005460C7 /* FaqViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaqViewController.h; sourceTree = "<group>"; };
+		80E161981BF9FC20005460C7 /* FaqViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaqViewController.m; sourceTree = "<group>"; };
+		AE3FA8F51C04A11700EAE29A /* bfeed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = bfeed.sqlite; sourceTree = "<group>"; };
+		AE3FA8F71C04A3D300EAE29A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AE3FA8F91C04A43A00EAE29A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE3FA9011C04A68500EAE29A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AE3FA9031C04A9A000EAE29A /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		AE3FA9041C04A9A000EAE29A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		AE3FA9051C04A9A000EAE29A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		AE3FA9061C04A9A000EAE29A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		AE3FA9071C04A9A000EAE29A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		AE3FA9081C04A9A000EAE29A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		AE3FA9091C04A9A000EAE29A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		AE3FA90A1C04A9A000EAE29A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		AE3FA90B1C04A9A000EAE29A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		AE3FA90C1C04A9A000EAE29A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		AE3FA90D1C04A9A000EAE29A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		AE461B961C048D63004DEEB6 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		AE461B971C048D63004DEEB6 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		AE461B9F1C048D74004DEEB6 /* Syncdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Syncdata.h; sourceTree = "<group>"; };
+		AE461BA01C048D74004DEEB6 /* Syncdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Syncdata.m; sourceTree = "<group>"; };
+		DD0C8B951C17DC81004B0320 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DD0C8B961C17DC81004B0320 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DD0C8B981C17E01E004B0320 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		DD0C8B991C17E01E004B0320 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +120,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441724D1C1826A90059A7E2 /* MessageUI.framework in Frameworks */,
+				AE3FA9021C04A68500EAE29A /* UIKit.framework in Frameworks */,
+				AE3FA8FA1C04A43A00EAE29A /* Foundation.framework in Frameworks */,
+				AE3FA8F81C04A3D300EAE29A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +147,16 @@
 		80E1614C1BF9FAA0005460C7 = {
 			isa = PBXGroup;
 			children = (
+				0441724C1C1826A90059A7E2 /* MessageUI.framework */,
+				044172461C181D720059A7E2 /* Color.h */,
+				044172471C181D720059A7E2 /* Color.m */,
+				044172481C181D720059A7E2 /* LineChart.h */,
+				044172491C181D720059A7E2 /* LineChart.m */,
+				044172361C180C510059A7E2 /* LatchViewController.h */,
+				044172371C180C510059A7E2 /* LatchViewController.m */,
+				AE3FA9011C04A68500EAE29A /* UIKit.framework */,
+				AE3FA8F91C04A43A00EAE29A /* Foundation.framework */,
+				AE3FA8F71C04A3D300EAE29A /* libsqlite3.tbd */,
 				80E161571BF9FAA0005460C7 /* BreastFeedingApplication */,
 				80E161741BF9FAA1005460C7 /* BreastFeedingApplicationTests */,
 				80E1617F1BF9FAA1005460C7 /* BreastFeedingApplicationUITests */,
@@ -104,6 +177,8 @@
 		80E161571BF9FAA0005460C7 /* BreastFeedingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				AE461BBA1C048DD6004DEEB6 /* Libs */,
+				AE461B941C048D46004DEEB6 /* Data Modal */,
 				80E1615B1BF9FAA0005460C7 /* AppDelegate.h */,
 				80E1615C1BF9FAA0005460C7 /* AppDelegate.m */,
 				80E1615E1BF9FAA0005460C7 /* FirstViewController.h */,
@@ -115,6 +190,16 @@
 				80E161691BF9FAA0005460C7 /* LaunchScreen.storyboard */,
 				80E1616C1BF9FAA0005460C7 /* Info.plist */,
 				80E161581BF9FAA0005460C7 /* Supporting Files */,
+				80E1618E1BF9FB9A005460C7 /* GraphViewController.h */,
+				80E1618F1BF9FB9A005460C7 /* GraphViewController.m */,
+				80E161911BF9FBD4005460C7 /* ContactViewController.h */,
+				80E161921BF9FBD4005460C7 /* ContactViewController.m */,
+				80E161941BF9FC04005460C7 /* QuoteViewController.h */,
+				80E161951BF9FC04005460C7 /* QuoteViewController.m */,
+				80E161971BF9FC20005460C7 /* FaqViewController.h */,
+				80E161981BF9FC20005460C7 /* FaqViewController.m */,
+				DD0C8B951C17DC81004B0320 /* LoginViewController.h */,
+				DD0C8B961C17DC81004B0320 /* LoginViewController.m */,
 			);
 			path = BreastFeedingApplication;
 			sourceTree = "<group>";
@@ -122,7 +207,10 @@
 		80E161581BF9FAA0005460C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE3FA8F51C04A11700EAE29A /* bfeed.sqlite */,
 				80E161591BF9FAA0005460C7 /* main.m */,
+				DD0C8B981C17E01E004B0320 /* SignUpViewController.h */,
+				DD0C8B991C17E01E004B0320 /* SignUpViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +231,59 @@
 				80E161821BF9FAA1005460C7 /* Info.plist */,
 			);
 			path = BreastFeedingApplicationUITests;
+			sourceTree = "<group>";
+		};
+		AE461B941C048D46004DEEB6 /* Data Modal */ = {
+			isa = PBXGroup;
+			children = (
+				AE461B951C048D52004DEEB6 /* Objects */,
+				AE461B961C048D63004DEEB6 /* DataModel.h */,
+				AE461B971C048D63004DEEB6 /* DataModel.m */,
+			);
+			name = "Data Modal";
+			sourceTree = "<group>";
+		};
+		AE461B951C048D52004DEEB6 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AE461B9F1C048D74004DEEB6 /* Syncdata.h */,
+				AE461BA01C048D74004DEEB6 /* Syncdata.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		AE461BBA1C048DD6004DEEB6 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				AE461BBB1C048DE1004DEEB6 /* FMDB */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		AE461BBB1C048DE1004DEEB6 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FA9031C04A9A000EAE29A /* FMDB.h */,
+				AE3FA9041C04A9A000EAE29A /* FMDatabase.h */,
+				AE3FA9051C04A9A000EAE29A /* FMDatabase.m */,
+				AE3FA9061C04A9A000EAE29A /* FMResultSet.h */,
+				AE3FA9071C04A9A000EAE29A /* FMResultSet.m */,
+				AE3FA9081C04A9A000EAE29A /* FMDatabaseQueue.h */,
+				AE3FA9091C04A9A000EAE29A /* FMDatabaseQueue.m */,
+				AE3FA90A1C04A9A000EAE29A /* FMDatabaseAdditions.h */,
+				AE3FA90B1C04A9A000EAE29A /* FMDatabaseAdditions.m */,
+				AE3FA90C1C04A9A000EAE29A /* FMDatabasePool.h */,
+				AE3FA90D1C04A9A000EAE29A /* FMDatabasePool.m */,
+				AE461BBC1C048DF3004DEEB6 /* ObjSqlite */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		AE461BBC1C048DF3004DEEB6 /* ObjSqlite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ObjSqlite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +353,7 @@
 				TargetAttributes = {
 					80E161541BF9FAA0005460C7 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4BQJ945BK2;
 					};
 					80E161701BF9FAA1005460C7 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -250,6 +392,7 @@
 			files = (
 				80E1616B1BF9FAA0005460C7 /* LaunchScreen.storyboard in Resources */,
 				80E161681BF9FAA0005460C7 /* Assets.xcassets in Resources */,
+				AE3FA8F61C04A11700EAE29A /* bfeed.sqlite in Resources */,
 				80E161661BF9FAA0005460C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +419,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E161631BF9FAA0005460C7 /* SecondViewController.m in Sources */,
+				80E161931BF9FBD4005460C7 /* ContactViewController.m in Sources */,
+				0441724A1C181D720059A7E2 /* Color.m in Sources */,
+				AE461B981C048D63004DEEB6 /* DataModel.m in Sources */,
 				80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */,
+				DD0C8B9A1C17E01E004B0320 /* SignUpViewController.m in Sources */,
+				AE3FA9101C04A9A000EAE29A /* FMDatabaseQueue.m in Sources */,
+				AE3FA9111C04A9A000EAE29A /* FMDatabaseAdditions.m in Sources */,
+				AE461BB21C048D74004DEEB6 /* Syncdata.m in Sources */,
+				AE3FA9121C04A9A000EAE29A /* FMDatabasePool.m in Sources */,
+				DD0C8B971C17DC81004B0320 /* LoginViewController.m in Sources */,
 				80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */,
+				0441724B1C181D720059A7E2 /* LineChart.m in Sources */,
+				AE3FA90F1C04A9A000EAE29A /* FMResultSet.m in Sources */,
+				80E161901BF9FB9A005460C7 /* GraphViewController.m in Sources */,
+				80E161991BF9FC20005460C7 /* FaqViewController.m in Sources */,
+				80E161961BF9FC04005460C7 /* QuoteViewController.m in Sources */,
+				AE3FA90E1C04A9A000EAE29A /* FMDatabase.m in Sources */,
 				80E1615A1BF9FAA0005460C7 /* main.m in Sources */,
+				044172381C180C510059A7E2 /* LatchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +576,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreastFeedingApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,10 +592,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreastFeedingApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -502,6 +671,7 @@
 				80E161871BF9FAA1005460C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80E161881BF9FAA1005460C7 /* Build configuration list for PBXNativeTarget "BreastFeedingApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +680,7 @@
 				80E1618A1BF9FAA1005460C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80E1618B1BF9FAA1005460C7 /* Build configuration list for PBXNativeTarget "BreastFeedingApplicationUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +689,7 @@
 				80E1618D1BF9FAA1005460C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
