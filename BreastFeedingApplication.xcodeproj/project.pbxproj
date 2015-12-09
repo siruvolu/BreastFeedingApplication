@@ -237,8 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				AE461B951C048D52004DEEB6 /* Objects */,
-				AE461B961C048D63004DEEB6 /* DataModel.h */,
 				AE461B971C048D63004DEEB6 /* DataModel.m */,
+				AE461B961C048D63004DEEB6 /* DataModel.h */,
 			);
 			name = "Data Modal";
 			sourceTree = "<group>";
