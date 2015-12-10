@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  BreastFeedingApplication
 //
-//  Created by Kancharla, Soumya on 16/11/15.
-//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
+//  Created by Anil Siruvolu on 12/8/15.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  DataModel.h
 //  BreastFeeding
 //
-//  Created by ****** on 21/05/13.
-//  Copyright (c) 2015 ****. All rights reserved.
+//  Created by Anil Siruvolu on 12/8/15.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

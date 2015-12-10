@@ -2,8 +2,8 @@
 //  FMDatabasePool.m
 //  fmdb
 //
-//  Created by Kancharla, Soumya
-//  Copyright 2011 Flying Meat Inc. All rights reserved.
+//  Created by Anil Siruvolu on 12/8/15.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import "FMDatabasePool.h"
