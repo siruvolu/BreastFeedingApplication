@@ -9,7 +9,7 @@
 #import "LatchViewController.h"
 
 @interface LatchViewController (){
-    double lScore, aScore, tScore, cScore, hScore, total;
+    int lScore, aScore, tScore, cScore, hScore, total;
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *lpick;
 @property (weak, nonatomic) IBOutlet UIPickerView *apick;
@@ -193,7 +193,9 @@
 - (IBAction)Total:(id)sender {
     
     total = lScore+aScore+tScore+cScore+hScore;
-    self.totalScore.text = [NSString stringWithFormat:@"%.f",total];
+    NSNumber *newTotal = [NSNumber numberWithInt:total];
+    [self.totalArray addObject:newTotal];
+    self.totalScore.text = [NSString stringWithFormat:@"%d",total];
     
 }
 
@@ -201,6 +203,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.totalArray = [[NSMutableArray alloc]init];
     
     self.lScale = @[@"Too sleepy or reluctant, No latch obtained",@"Repeated attempts Must hold nipple in mouth Must stimulate to suck",@"Grasps breast, Tongue down and forward, Lips flanged,Rhythmic suckling"];
     

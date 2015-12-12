@@ -9,6 +9,7 @@
 #import "GraphViewController.h"
 #import "LineChart.h"
 #import "Color.h"
+#import "LatchViewController.h"
 
 @interface GraphViewController ()
 
@@ -19,10 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //NSArray *viewControllers = [self.tabBarController viewControllers];
+    //UITabBarController *myNavController = (UITabBarController *)viewControllers[2];
+    
+    //self.latchVC = (LatchViewController *) [tabBarController.viewControllers objectAtIndex:1];
+    //In our example here, we only have 2 view controllers (A and B)
+    //So, index 1 is where controller B resides.
+    
+    
+    
+    
     
     [self.view addSubview:[self chart1]];
 
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -56,6 +69,8 @@
     
     return lineChart;
 }
+
+
 
 
 /*

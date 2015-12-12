@@ -10,4 +10,6 @@
 
 @interface LatchViewController : UIViewController
 
+@property (nonatomic) NSMutableArray *totalArray;
+
 @end
