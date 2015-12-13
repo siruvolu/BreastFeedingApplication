@@ -3,7 +3,11 @@
     <dependencies>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+=======
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+>>>>>>> master
 =======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
 >>>>>>> master
