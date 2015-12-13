@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LatchViewController.h"
 
 @interface GraphViewController : UIViewController
+
+@property (nonatomic) LatchViewController *latchVC;
 
 @end

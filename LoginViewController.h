@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 
-- (IBAction)BackTap:(id)sender;
-
 
 
 
