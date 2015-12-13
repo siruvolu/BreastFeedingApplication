@@ -2,14 +2,14 @@
 //  DataModel.h
 //  BreastFeeding
 //
-<<<<<<< HEAD
+
 
 //
-=======
+
 //  Created by Anil Siruvolu on 12/8/15.
 //  Copyright © 2015 Anil Siruvolu. All rights reserved.
 // new story board
->>>>>>> master
+
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
