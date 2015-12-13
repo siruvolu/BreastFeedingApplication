@@ -9,6 +9,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 2a54725... Storyboard Corrupted by srinivas commit
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
 =======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -19,6 +22,7 @@
 =======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
 >>>>>>> master
+<<<<<<< HEAD
 =======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
 >>>>>>> parent of 9d5e901... Merge branch 'master' into siruvolu
@@ -34,6 +38,8 @@
 =======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
 >>>>>>> master
+=======
+>>>>>>> parent of 2a54725... Storyboard Corrupted by srinivas commit
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -560,10 +566,10 @@
             </objects>
             <point key="canvasLocation" x="1462.5" y="286.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Doclogin View Controller-->
         <scene sceneID="mtU-RG-42O">
             <objects>
-                <viewController id="YoB-NB-d25" sceneMemberID="viewController">
+                <viewController id="YoB-NB-d25" customClass="docloginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rHQ-Rl-BeF"/>
                         <viewControllerLayoutGuide type="bottom" id="Bmw-0G-37n"/>
@@ -591,6 +597,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb3-tY-ZzL">
                                 <rect key="frame" x="155" y="389" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="doclogin:" destination="YoB-NB-d25" eventType="touchUpInside" id="DjC-ga-9KJ"/>
+                                </connections>
                             </button>
 <<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-pR-Aoz">
@@ -613,6 +622,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="doclogin" destination="mb3-tY-ZzL" id="9vn-ig-9t8"/>
+                        <outlet property="docpwd" destination="dVj-wQ-rwY" id="BVj-J9-J0B"/>
+                        <outlet property="doctorname" destination="6jj-ar-Ypy" id="02Y-6n-jnq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewi-NP-l5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
