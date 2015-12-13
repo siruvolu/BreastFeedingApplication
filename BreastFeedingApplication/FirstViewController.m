@@ -128,7 +128,7 @@ NSTimer *timer;
     
     if(data.feedType)
     {
-        cell.textLabel.text =@"Feeded On Right Breast" ;
+        cell.textLabel.text =@"Feeded On Right Breast";
     }
     else
         cell.textLabel.text =@"Feeded On Left Breast" ;
