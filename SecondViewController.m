@@ -15,12 +15,12 @@
 
 @implementation SecondViewController
 
-//To check password length
-- (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSUInteger newLength = [pwd.text length] + [string length] - range.length;
-    return (newLength >= 2) ? NO : YES;
-}
+////To check password length
+//- (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    NSUInteger newLength = [pwd.text length] + [string length] - range.length;
+//    return (newLength >= 2) ? NO : YES;
+//}
 
 //Validations for email id
 - (BOOL)validateEmailWithString:(NSString*)emailid
@@ -33,7 +33,7 @@
 
 -(IBAction)submitbtn:(id)sender
 {
-    if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
+    if([_mothername.text isEqualToString:@""] || [_motherlast.text isEqualToString:@""] || [_motherdob.text isEqualToString:@""] || [_motherpob.text isEqualToString:@""] || [_childdob.text isEqualToString:@""] || [_childwt.text isEqualToString:@""]|| [_chsex.text isEqualToString:@""] || [_emailid.text isEqualToString:@""] || [_pwd.text isEqualToString:@""] || [_reenterpwd.text isEqualToString:@""])
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATTENTION!" message:@"You must enter all the fields" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -41,33 +41,37 @@
         
         [alert addAction:defaultAction];
         
-        //To disable tab bars
+        
+               //To disable tab bars
         
         [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
         [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+ else if ([_pwd.text isEqualToString:_reenterpwd.text]) {
+        NSLog(@"Password Match");
+        //[self validateEmailWithString:self];
+       [self Submituser];
         
     }
     
-    else if ([_pwd.text isEqualToString:_reenterpwd.text]) {
-        NSLog(@"Password Match");
-        [self Submituser];
-        
-    }
     else {
+        
         UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Sorry !" message:@"Password does not match" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
         
-        
-      
         [alert addAction:defaultAction];
    
         [self presentViewController:alert animated:YES completion:nil];
     }
+    
 }
+
+
 
 -(void) Submituser {
     
@@ -101,8 +105,7 @@
     [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
     
     [self presentViewController:success animated:YES completion:nil];
-
-    
+       
     
 //    [self navRef];
 //}
@@ -139,4 +142,8 @@
  */
 }
 
+- (IBAction)BackTap:(id)sender {
+    [self.view endEditing:YES];
+    
+}
 @end

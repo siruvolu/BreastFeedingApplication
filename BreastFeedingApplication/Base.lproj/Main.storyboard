@@ -255,6 +255,10 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lxQ-Fc-nyR" appends="YES" id="bz5-0B-GzQ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mother Details" image="Feeding Details" selectedImage="Mother Details" id="cPa-gy-q4n"/>
                     <connections>
@@ -271,6 +275,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lxQ-Fc-nyR">
+                    <connections>
+                        <action selector="BackTap:" destination="8rJ-Kc-sve" id="fPa-e4-VdX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="945.5" y="272.5"/>
         </scene>
@@ -386,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAt-Fn-Yvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12.5" y="-1787.5"/>
+            <point key="canvasLocation" x="119.5" y="-1751.5"/>
         </scene>
         <!--Latch Score-->
         <scene sceneID="95c-6m-OOM">
@@ -563,6 +572,13 @@
                                     <action selector="doclogin:" destination="YoB-NB-d25" eventType="touchUpInside" id="DjC-ga-9KJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-pR-Aoz">
+                                <rect key="frame" x="20" y="39" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="0Vy-ae-JO3" kind="show" id="jtg-HK-4tR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -574,8 +590,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewi-NP-l5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b3t-Zd-G4H">
+                    <connections>
+                        <action selector="BackTap:" destination="YoB-NB-d25" id="OfS-e3-0H2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-814.5" y="-542.5"/>
+            <point key="canvasLocation" x="-812.5" y="-579.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="JD5-7j-EIH">
@@ -629,6 +650,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="l8z-im-e3u" appends="YES" id="UFC-j7-aLP"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="o8q-9s-3d3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -640,8 +665,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7P7-g7-hEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l8z-im-e3u">
+                    <connections>
+                        <action selector="BackTap:" destination="0Vy-ae-JO3" id="oyX-k2-qpo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="130.5" y="-547.5"/>
+            <point key="canvasLocation" x="-169.5" y="-579.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -717,5 +747,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rML-Ry-BER"/>
+        <segue reference="Dpd-oB-zfl"/>
     </inferredMetricsTieBreakers>
 </document>
