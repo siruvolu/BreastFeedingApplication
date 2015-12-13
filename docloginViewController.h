@@ -14,6 +14,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *docpwd;
 @property (weak, nonatomic) IBOutlet UIButton *doclogin;
 
-- (IBAction)BackTap:(id)sender;
 
 @end
