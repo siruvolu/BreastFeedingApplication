@@ -24,9 +24,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 @property (weak, nonatomic) IBOutlet UITextField *reenterpwd;
 
-//- (IBAction)submitfrnew:(id)sender;
+- (IBAction)BackTap:(id)sender;
+
+- (BOOL)validateEmailWithString:(NSString*)emailid;
 
 //- (IBAction)submitfrnew:(id)sender;
+
+
 @end
 
 
