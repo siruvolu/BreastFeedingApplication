@@ -598,6 +598,13 @@
                                     <segue destination="0Vy-ae-JO3" kind="show" id="jtg-HK-4tR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-pR-Aoz">
+                                <rect key="frame" x="20" y="39" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="0Vy-ae-JO3" kind="show" id="jtg-HK-4tR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -686,7 +693,11 @@
                 </tapGestureRecognizer>
             </objects>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <point key="canvasLocation" x="-61.5" y="-713.5"/>
+=======
+            <point key="canvasLocation" x="-169.5" y="-579.5"/>
+>>>>>>> master
 =======
             <point key="canvasLocation" x="-169.5" y="-579.5"/>
 >>>>>>> master
