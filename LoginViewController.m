@@ -7,8 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import "SecondViewController.h"
+#import "DB.h"
 
 @interface LoginViewController ()
+
+@property (nonatomic, strong) DB *db;
+
+
 
 @end
 
@@ -17,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
+    
 }
 -(IBAction)login:(id)sender
 {
@@ -28,6 +36,9 @@
         
         //[alert addAction:defaultAction];
        // [self presentViewController:alert animated:YES completion:nil];
+        SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        secondViewController.struser = _username.text;
+        //[self.navigationController pushViewController:secondViewController animated:YES];
     }
     
     else{

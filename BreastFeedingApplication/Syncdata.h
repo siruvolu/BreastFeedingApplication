@@ -12,5 +12,5 @@
 @property (nonatomic) int feedIndex;
 @property ( nonatomic) int duration;
 @property ( nonatomic) int feedType;
-@property (strong, nonatomic) NSString   *feedDate,*feedTime,*feedTimeStamp;
+@property (strong, nonatomic) NSString   *feedDate,*feedTime,*feedTimeStamp,*mfname;
 @end

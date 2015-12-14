@@ -11,6 +11,7 @@
 		0441724A1C181D720059A7E2 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172471C181D720059A7E2 /* Color.m */; };
 		0441724B1C181D720059A7E2 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172491C181D720059A7E2 /* LineChart.m */; };
 		0441724D1C1826A90059A7E2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0441724C1C1826A90059A7E2 /* MessageUI.framework */; };
+		04F664B41C1E06E400B59433 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F664B31C1E06E400B59433 /* DB.m */; };
 		80E1615A1BF9FAA0005460C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161591BF9FAA0005460C7 /* main.m */; };
 		80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615C1BF9FAA0005460C7 /* AppDelegate.m */; };
 		80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615F1BF9FAA0005460C7 /* FirstViewController.m */; };
@@ -34,9 +35,9 @@
 		AE3FA9121C04A9A000EAE29A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FA90D1C04A9A000EAE29A /* FMDatabasePool.m */; };
 		AE461B981C048D63004DEEB6 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE461B971C048D63004DEEB6 /* DataModel.m */; };
 		AE461BB21C048D74004DEEB6 /* Syncdata.m in Sources */ = {isa = PBXBuildFile; fileRef = AE461BA01C048D74004DEEB6 /* Syncdata.m */; };
-		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; };
+		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; };
+		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		044172481C181D720059A7E2 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
 		044172491C181D720059A7E2 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
 		0441724C1C1826A90059A7E2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		04F664B21C1E06E400B59433 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
+		04F664B31C1E06E400B59433 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
 		80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastFeedingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161591BF9FAA0005460C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80E1615B1BF9FAA0005460C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				80E161951BF9FC04005460C7 /* QuoteViewController.m */,
 				80E161971BF9FC20005460C7 /* FaqViewController.h */,
 				80E161981BF9FC20005460C7 /* FaqViewController.m */,
+				04F664B21C1E06E400B59433 /* DB.h */,
+				04F664B31C1E06E400B59433 /* DB.m */,
 			);
 			path = BreastFeedingApplication;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				80E1615A1BF9FAA0005460C7 /* main.m in Sources */,
 				DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */,
 				044172381C180C510059A7E2 /* LatchViewController.m in Sources */,
+				04F664B41C1E06E400B59433 /* DB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,4 +27,5 @@
 //Syncdata table functions
 -(NSMutableArray *)getTodayFeed:(NSString *)date;
 - (void)insertFeed:(NSString *)date timeStamp:(NSString *)timeStamp time:(NSString *)time duration:(int)duration type:(int)type;
+
 @end

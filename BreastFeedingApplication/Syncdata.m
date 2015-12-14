@@ -14,6 +14,7 @@
 @synthesize feedTime;
 @synthesize feedTimeStamp;
 @synthesize feedType;
+@synthesize mfname;
 
 /**
  * Compares the appointment_Date of two Syncdata objects and returns  NSComparisonResult

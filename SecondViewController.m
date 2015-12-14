@@ -2,18 +2,76 @@
 //  SecondViewController.m
 //  BreastFeedingApplication
 //
-//  Created by Kancharla, Soumya on 16/11/15.
-//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
+//  Created by Anil Siruvolu on 12/8/15.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import "SecondViewController.h"
 #import "LoginViewController.h"
+#import "DB.h"
 
 @interface SecondViewController ()
+@property (nonatomic, strong) DB *db;
+-(void)loadInfoToEdit;
 
 @end
 
+
+
 @implementation SecondViewController
+
+- (void)viewDidLoad {
+    //if ([_struser  isEqualToString:@""] ) {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    self.mothername.delegate = self;
+    self.motherlast.delegate = self;
+    self.motherdob.delegate = self;
+    self.motherpob.delegate = self;
+    self.childdob.delegate = self;
+    self.childwt.delegate = self ;
+    self.chsex.delegate = self;
+    self.emailid.delegate = self;
+    self.pwd.delegate = self;
+    
+  
+    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
+    
+    //}
+    //else {
+        //[self loadInfoToEdit];
+//}
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view.
+//    
+//    // Make self the delegate of the textfields.
+//    self.mothername.delegate = self;
+//   
+//    
+//    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sql"];
+//    
+//    // Check if should load specific record for editing.
+//    if (self.recordIDToEdit != -1) {
+//        // Load the record with the specific ID from the database.
+//        [self loadInfoToEdit];
+//    }
+//    
+//}
+//
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
+
 
 //To check password length
 - (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -33,7 +91,22 @@
 
 -(IBAction)submitbtn:(id)sender
 {
-    if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
+    
+    NSString *query;
+    
+        query = [NSString stringWithFormat:@"insert into mother_details values(null,'%@','%@','%@','%@','%@','%@','%@','%@','%@',0)", self.mothername.text, self.motherlast.text,self.motherdob.text,self.motherpob.text,self.childdob.text,self.childwt.text,self.chsex.text,self.emailid.text,self.pwd.text];
+     [self.db executeQuery:query];
+    
+    // If the query was successfully executed then pop the view controller.
+    if (self.db.affectedRows != 0) {
+        NSLog(@"Query was executed successfully. Affected rows = %d", self.db.affectedRows);
+    }
+    else{
+        NSLog(@"Could not execute the query.");
+    }
+
+    
+   if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATTENTION!" message:@"You must enter all the fields" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -48,6 +121,8 @@
         [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
         [self presentViewController:alert animated:YES completion:nil];
+        
+        
         
     }
     
@@ -79,7 +154,7 @@
     [defaults setObject:_childdob.text forKey:@"childdob"];
     [defaults setObject:_childwt.text forKey:@"Childweight"];
     [defaults setObject:_chsex.text forKey:@"Child Sex"];
-    [defaults setObject:_chsex.text forKey:@"Child Sex"];
+    
     [defaults setObject:_emailid.text forKey:@"Email id"];
     [defaults setObject:_pwd.text forKey:@"Password"];
     [defaults setObject:_reenterpwd.text forKey:@"Reenter Password"];
@@ -138,5 +213,26 @@
  }
  */
 }
+
+-(void)loadInfoToEdit{
+    // Create the query.
+    NSString *query = [NSString stringWithFormat:@"select * from mother_details where email=%@", self.struser];
+    
+    NSLog(@"%@",self.struser);
+    
+    // Load the relevant data.
+    NSArray *results = [[NSArray alloc] initWithArray:[self.db loadDataFromDB:query]];
+    
+    // Set the loaded data to the textfields.
+    self.mothername.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mfname"]];
+    self.motherlast.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mlname"]];
+    self.motherdob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mage"]];
+    self.motherpob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"address"]];
+    self.childdob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"cage"]];
+    self.childwt.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"cweight"]];
+    self.emailid.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"csex"]];
+    
+}
+
 
 @end

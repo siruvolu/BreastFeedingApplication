@@ -100,6 +100,9 @@ static DataModel *sharedDataModel;
   
 }
 
+
+
+
 /**
  * This method is used get all the feed for given date
  *
