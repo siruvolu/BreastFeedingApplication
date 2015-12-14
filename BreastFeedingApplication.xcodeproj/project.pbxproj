@@ -37,6 +37,10 @@
 		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E807E7151C1E81EC00A318C9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E807E70E1C1E81EC00A318C9 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E807E7161C1E81EC00A318C9 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E807E7101C1E81EC00A318C9 /* MasterTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E807E7171C1E81EC00A318C9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = E807E7121C1E81EC00A318C9 /* Patient.m */; settings = {ASSET_TAGS = (); }; };
+		E807E7181C1E81EC00A318C9 /* PatientDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = E807E7141C1E81EC00A318C9 /* PatientDirectory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,14 @@
 		DD685B1E1C19D2D10017CA9D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		DD685B1F1C19D2D10017CA9D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
 		DD685B201C19D2D10017CA9D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
+		E807E70D1C1E81EC00A318C9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/DetailViewController.h"; sourceTree = "<group>"; };
+		E807E70E1C1E81EC00A318C9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/DetailViewController.m"; sourceTree = "<group>"; };
+		E807E70F1C1E81EC00A318C9 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterTableViewController.h; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/MasterTableViewController.h"; sourceTree = "<group>"; };
+		E807E7101C1E81EC00A318C9 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterTableViewController.m; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/MasterTableViewController.m"; sourceTree = "<group>"; };
+		E807E7111C1E81EC00A318C9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Patient.h; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/Patient.h"; sourceTree = "<group>"; };
+		E807E7121C1E81EC00A318C9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Patient.m; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/Patient.m"; sourceTree = "<group>"; };
+		E807E7131C1E81EC00A318C9 /* PatientDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientDirectory.h; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/PatientDirectory.h"; sourceTree = "<group>"; };
+		E807E7141C1E81EC00A318C9 /* PatientDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientDirectory.m; path = "../../BreastFeedingApplication-master/BreastFeedingApplication/PatientDirectory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +221,14 @@
 		80E161581BF9FAA0005460C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E807E70D1C1E81EC00A318C9 /* DetailViewController.h */,
+				E807E70E1C1E81EC00A318C9 /* DetailViewController.m */,
+				E807E70F1C1E81EC00A318C9 /* MasterTableViewController.h */,
+				E807E7101C1E81EC00A318C9 /* MasterTableViewController.m */,
+				E807E7111C1E81EC00A318C9 /* Patient.h */,
+				E807E7121C1E81EC00A318C9 /* Patient.m */,
+				E807E7131C1E81EC00A318C9 /* PatientDirectory.h */,
+				E807E7141C1E81EC00A318C9 /* PatientDirectory.m */,
 				AE3FA8F51C04A11700EAE29A /* bfeed.sqlite */,
 				80E161591BF9FAA0005460C7 /* main.m */,
 			);
@@ -420,6 +440,7 @@
 			files = (
 				80E161931BF9FBD4005460C7 /* ContactViewController.m in Sources */,
 				0441724A1C181D720059A7E2 /* Color.m in Sources */,
+				E807E7171C1E81EC00A318C9 /* Patient.m in Sources */,
 				AE461B981C048D63004DEEB6 /* DataModel.m in Sources */,
 				DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */,
 				80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */,
@@ -435,9 +456,12 @@
 				80E161991BF9FC20005460C7 /* FaqViewController.m in Sources */,
 				80E161961BF9FC04005460C7 /* QuoteViewController.m in Sources */,
 				AE3FA90E1C04A9A000EAE29A /* FMDatabase.m in Sources */,
+				E807E7161C1E81EC00A318C9 /* MasterTableViewController.m in Sources */,
 				80E1615A1BF9FAA0005460C7 /* main.m in Sources */,
 				DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */,
 				044172381C180C510059A7E2 /* LatchViewController.m in Sources */,
+				E807E7151C1E81EC00A318C9 /* DetailViewController.m in Sources */,
+				E807E7181C1E81EC00A318C9 /* PatientDirectory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

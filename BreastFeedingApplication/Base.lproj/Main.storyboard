@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Vy-ae-JO3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Vy-ae-JO3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -572,6 +572,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="doclogin:" destination="YoB-NB-d25" eventType="touchUpInside" id="DjC-ga-9KJ"/>
+                                    <segue destination="ApB-Q6-jN9" kind="showDetail" id="LTt-cM-M3L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-pR-Aoz">
@@ -744,13 +745,156 @@
             </objects>
             <point key="canvasLocation" x="-152.5" y="272.5"/>
         </scene>
+        <!--Edit-Patient-->
+        <scene sceneID="Ern-5z-56v">
+            <objects>
+                <viewController storyboardIdentifier="Edit-Patient" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OC1-sa-UIi" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qPo-ti-Sg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Oe-cL-8sD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zxT-ke-Ckt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyi-gN-gbi">
+                                <rect key="frame" x="253" y="299" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelSelected:" destination="OC1-sa-UIi" eventType="touchUpInside" id="Dfv-3N-uws"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Patient Name" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUg-6l-jK3">
+                                <rect key="frame" x="127" y="102" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Latch Score" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-MT-Wm9">
+                                <rect key="frame" x="127" y="218" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Patient Age" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-cm-I2t">
+                                <rect key="frame" x="127" y="161" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwj-Fs-otf">
+                                <rect key="frame" x="51" y="299" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SaveSelected:" destination="OC1-sa-UIi" eventType="touchUpInside" id="hab-RY-Wji"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit-Patient" id="6UE-mJ-mxv"/>
+                    <connections>
+                        <outlet property="LatchScoreField" destination="Xlt-MT-Wm9" id="9IM-pP-jVG"/>
+                        <outlet property="PatientAgeField" destination="GGT-cm-I2t" id="noT-Gm-ki5"/>
+                        <outlet property="PatientNameField" destination="sUg-6l-jK3" id="lpw-Xh-268"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eoy-rK-Bw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-576" y="1207"/>
+        </scene>
+        <!--Patient List-->
+        <scene sceneID="MJo-H0-bAR">
+            <objects>
+                <tableViewController storyboardIdentifier="Patient List" clearsSelectionOnViewWillAppear="NO" id="bXx-of-C5U" customClass="MasterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jm8-Be-aRz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="npi-ll-KAy" detailTextLabel="Tpw-sb-31v" rowHeight="40" style="IBUITableViewCellStyleSubtitle" id="XrR-fP-Pst">
+                                <rect key="frame" x="0.0" y="92" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XrR-fP-Pst" id="Hfe-6t-hqg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="npi-ll-KAy">
+                                            <rect key="frame" x="15" y="3" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tpw-sb-31v">
+                                            <rect key="frame" x="15" y="23" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bXx-of-C5U" id="Giw-Q8-sf7"/>
+                            <outlet property="delegate" destination="bXx-of-C5U" id="Z8C-ao-DW6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Patient List" id="4Zc-Fp-L0P"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="666"/>
+                    <connections>
+                        <segue destination="8eT-rq-0em" kind="showDetail" identifier="PatientDetail" id="VhM-zU-N12">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbX-gF-utf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633.5" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E8C-Ql-aVJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8eT-rq-0em" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IF8-nk-pBA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OC1-sa-UIi" kind="relationship" relationship="rootViewController" id="mSQ-vE-Sxi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8S-GL-wfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1624" y="1187"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xXS-oc-M2S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ApB-Q6-jN9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ta-Ah-h5A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bXx-of-C5U" kind="relationship" relationship="rootViewController" id="FnU-zi-F5g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNy-kl-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="195"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Feeding Details" width="30" height="30"/>
         <image name="Mother Details" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jtg-HK-4tR"/>
         <segue reference="rML-Ry-BER"/>
-        <segue reference="Dpd-oB-zfl"/>
     </inferredMetricsTieBreakers>
 </document>
