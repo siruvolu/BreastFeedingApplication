@@ -20,11 +20,11 @@
 - (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSUInteger newLength = [pwd.text length] + [string length] - range.length;
-    return (newLength >= 2) ? NO : YES;
+    return (newLength >= 6) ? NO : YES;
 }
 
 //Validations for email id
-- (BOOL)validateEmailWithString:(NSString*)emailid
+- (BOOL)validateEmail:(UITextField*)emailid
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -43,7 +43,7 @@
         [alert addAction:defaultAction];
         
         
-        //To disable tab bars
+        //To disable tab bars if any fields has been missed
         
         [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
@@ -54,7 +54,7 @@
     }
     
     else if ([_pwd.text isEqualToString:_reenterpwd.text]) {
-        NSLog(@"Password Match");
+        NSLog(@"Password Match");                                   // To check password matching
         [self Submituser];
         
     }
@@ -94,7 +94,7 @@
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
     [success addAction:defaultAction];
     
-    // To enable tab bars
+    // To enable tab bars after all the details has been filled
     
     [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
     [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
@@ -139,6 +139,7 @@
  */
 }
 
+// To return the keypad after typing
 - (IBAction)BackTap:(id)sender {
      [self.view endEditing:YES];
 }
