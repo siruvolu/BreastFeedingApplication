@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 
 
+- (IBAction)BackTap:(id)sender;
 
 
 @end

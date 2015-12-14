@@ -42,5 +42,9 @@
     [self.navigationItem setHidesBackButton:YES animated:YES];
 }
 
+    - (IBAction)BackTap:(id)sender {
+        [self.view endEditing:YES];
+        
 
+}
 @end

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Vy-ae-JO3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Vy-ae-JO3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -272,6 +271,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NkY-sQ-aKv">
+                    <connections>
+                        <action selector="BackTap:" destination="8rJ-Kc-sve" id="BCN-6v-OxF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="945.5" y="272.5"/>
         </scene>
@@ -529,10 +533,10 @@
             </objects>
             <point key="canvasLocation" x="1462.5" y="286.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Doclogin View Controller-->
         <scene sceneID="mtU-RG-42O">
             <objects>
-                <viewController id="YoB-NB-d25" sceneMemberID="viewController">
+                <viewController id="YoB-NB-d25" customClass="docloginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rHQ-Rl-BeF"/>
                         <viewControllerLayoutGuide type="bottom" id="Bmw-0G-37n"/>
@@ -560,15 +564,39 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb3-tY-ZzL">
                                 <rect key="frame" x="155" y="389" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="doclogin:" destination="YoB-NB-d25" eventType="touchUpInside" id="0T2-oM-DyH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-CL-4dK">
+                                <rect key="frame" x="26" y="28" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="0Vy-ae-JO3" kind="show" id="eUl-40-B1A"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="m5I-3C-SXM" appends="YES" id="ChK-WS-hvi"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="doclogin" destination="mb3-tY-ZzL" id="EGu-xq-ftc"/>
+                        <outlet property="docpwd" destination="dVj-wQ-rwY" id="yJT-mi-Dd8"/>
+                        <outlet property="doctorname" destination="6jj-ar-Ypy" id="egS-jY-V6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewi-NP-l5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="m5I-3C-SXM">
+                    <connections>
+                        <action selector="BackTap:" destination="YoB-NB-d25" id="Gyp-Xn-Va2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-814.5" y="-542.5"/>
+            <point key="canvasLocation" x="-846.5" y="-523.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="JD5-7j-EIH">
@@ -622,6 +650,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wEP-KG-MOh" appends="YES" id="IIV-OL-Cjv"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="o8q-9s-3d3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -633,8 +665,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7P7-g7-hEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wEP-KG-MOh">
+                    <connections>
+                        <action selector="BackTap:" destination="0Vy-ae-JO3" id="3aK-N2-AWL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="130.5" y="-547.5"/>
+            <point key="canvasLocation" x="2.5" y="-823.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -710,5 +747,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rML-Ry-BER"/>
+        <segue reference="eUl-40-B1A"/>
     </inferredMetricsTieBreakers>
 </document>

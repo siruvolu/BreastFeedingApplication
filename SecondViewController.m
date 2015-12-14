@@ -15,6 +15,7 @@
 
 @implementation SecondViewController
 
+
 //To check password length
 - (BOOL)pwd:(UITextField *)pwd shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -33,13 +34,14 @@
 
 -(IBAction)submitbtn:(id)sender
 {
-    if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
+    if([_mothername.text isEqualToString:@""] || [_motherlast.text isEqualToString:@""] || [_motherdob.text isEqualToString:@""] || [_motherpob.text isEqualToString:@""] || [_childdob.text isEqualToString:@""] || [_childwt.text isEqualToString:@""]|| [_chsex.text isEqualToString:@""] || [_emailid.text isEqualToString:@""] || [_pwd.text isEqualToString:@""] || [_reenterpwd.text isEqualToString:@""])
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATTENTION!" message:@"You must enter all the fields" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
         
         [alert addAction:defaultAction];
+        
         
         //To disable tab bars
         
@@ -61,13 +63,12 @@
         
         UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
         
-        
-      
         [alert addAction:defaultAction];
    
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
+
 
 -(void) Submituser {
     
@@ -101,8 +102,8 @@
     [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
     
     [self presentViewController:success animated:YES completion:nil];
-
     
+       
     
 //    [self navRef];
 //}
@@ -121,7 +122,6 @@
  }
  */
 
-
 //}
 //
 //-(void) navRef {
@@ -139,4 +139,7 @@
  */
 }
 
+- (IBAction)BackTap:(id)sender {
+     [self.view endEditing:YES];
+}
 @end
