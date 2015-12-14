@@ -808,6 +808,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PiA-pc-Snw">
+                            <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Logout"/>
+                            <connections>
+                                <segue destination="0Vy-ae-JO3" kind="show" id="Sw0-4d-KKB"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="npi-ll-KAy" detailTextLabel="Tpw-sb-31v" rowHeight="40" style="IBUITableViewCellStyleSubtitle" id="XrR-fP-Pst">
                                 <rect key="frame" x="0.0" y="92" width="375" height="40"/>
@@ -894,7 +902,7 @@
         <image name="Mother Details" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jtg-HK-4tR"/>
         <segue reference="rML-Ry-BER"/>
+        <segue reference="Sw0-4d-KKB"/>
     </inferredMetricsTieBreakers>
 </document>
