@@ -28,7 +28,7 @@
 }
 -(IBAction)login:(id)sender
 {
-    if([_username.text isEqualToString:@"admin@example.com"] && [_pwd.text isEqualToString:@"Password"] )
+    if(([_username.text isEqualToString:@"admin@example.com"] && [_pwd.text isEqualToString:@"Password"]) || ([_username.text isEqualToString:@"ahmed@example.com"] && [_pwd.text isEqualToString:@"Password1"]) || ([_username.text isEqualToString:@"ashraf@example.com"] && [_pwd.text isEqualToString:@"Password1"])|| ([_username.text isEqualToString:@"abhi@example.com"] && [_pwd.text isEqualToString:@"Password1"])|| ([_username.text isEqualToString:@"srav@example.com"] && [_pwd.text isEqualToString:@"Password1"]))
     {
         //UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Correct"                                                                       message:@"Welcome" preferredStyle:UIAlertControllerStyleAlert];
         
