@@ -25,6 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //NSLog(@"Your data: %@", _struser);
+//     self.emailid.text = self.struser;
+//    NSLog(@"Your data: %@", self.emailid.text);
     
     NSString *docsDir;
     NSArray *dirPaths;
@@ -50,7 +53,7 @@
         {
             char *errMsg;
             const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS MOTHER (ID INTEGER PRIMARY KEY AUTOINCREMENT, MNAME TEXT, ADDRESS TEXT, EMAIL TEXT)";
+            "CREATE TABLE IF NOT EXISTS MOTHER (ID INTEGER PRIMARY KEY AUTOINCREMENT, MFNAME TEXT, MLNAME TEXT, MAGE TEXT, ADDRESS TEXT, CAGE TEXT, CWEIGHT TEXT, CSEX TEXT, EMAIL TEXT)";
             
             if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
             {
@@ -62,15 +65,23 @@
         }
     }
     
-    self.mothername.delegate = self;
-    self.motherlast.delegate = self;
-    self.motherdob.delegate = self;
-    self.motherpob.delegate = self;
-    self.childdob.delegate = self;
-    self.childwt.delegate = self ;
-    self.chsex.delegate = self;
-    self.emailid.delegate = self;
-    self.pwd.delegate = self;
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Saved Details!" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
+    
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
+    
+            [alert addAction:defaultAction];
+    
+            [self presentViewController:alert animated:YES completion:nil];
+    
+//    self.mothername.delegate = self;
+//    self.motherlast.delegate = self;
+//    self.motherdob.delegate = self;
+//    self.motherpob.delegate = self;
+//    self.childdob.delegate = self;
+//    self.childwt.delegate = self ;
+//    self.chsex.delegate = self;
+//    self.emailid.delegate = self;
+//    self.pwd.delegate = self;
     
     
 //    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
@@ -102,6 +113,10 @@
     return [emailTest evaluateWithObject:emailid];
 }
 
+- (IBAction)loadbtn:(id)sender {
+    
+    [self loadMother];
+}
 
 -(IBAction)submitbtn:(id)sender
 {
@@ -146,19 +161,19 @@
         
     }
     else {
-        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Sorry !" message:@"Password does not match" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
-        
-        
-      
-        [alert addAction:defaultAction];
-   
-        [self presentViewController:alert animated:YES completion:nil];
+//        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Sorry !" message:@"Password does not match" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
+//        
+//        
+//      
+//        [alert addAction:defaultAction];
+//   
+//        [self presentViewController:alert animated:YES completion:nil];
     }
     
-    //[self saveData];
-      [self loadMother];
+    [self saveData];
+    
 }
 
 -(void) Submituser {
@@ -260,8 +275,8 @@
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO MOTHER (mname, address, email) VALUES (\"%@\", \"%@\", \"%@\")",
-                               _mothername.text, _motherpob.text, _emailid.text];
+                               @"INSERT INTO MOTHER (mfname, mlname, mage, address, cage, cweight, csex, email) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",
+                               _mothername.text, _motherlast.text,_motherdob.text,_motherpob.text,_childdob.text,_childwt.text, _chsex.text,_emailid.text];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(_contactDB, insert_stmt,
@@ -269,9 +284,9 @@
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
             NSLog(@"Mother added");
-            _mothername.text = @"";
-            _motherpob.text = @"";
-            _emailid.text = @"";
+//            _mothername.text = @"";
+//            _motherpob.text = @"";
+//            _emailid.text = @"";
         } else {
             NSLog(@"Failed to add mother");
         }
@@ -291,9 +306,13 @@
 //                              @"SELECT address, mname FROM mother WHERE name=\"%@\"",
 //                              _emailid.text];
         
+//        NSString *querySQL = [NSString stringWithFormat:
+//                              @"SELECT address, mname FROM mother WHERE email=\"%@\"",
+//                                                            _emailid.text];
+        
         NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT address, mname FROM mother WHERE email=\"%@\"",
-                                                            _emailid.text];
+                              @"SELECT mfname, mlname, mage, address, cage, cweight, csex FROM mother WHERE email=\"%@\"",
+                              _emailid.text];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -305,12 +324,34 @@
                 NSString *addressField = [[NSString alloc]
                                           initWithUTF8String:
                                           (const char *) sqlite3_column_text(
-                                                                             statement, 0)];
+                                                                             statement, 6)];
                 _motherdob.text = addressField;
                 NSString *mnameField = [[NSString alloc]
                                         initWithUTF8String:(const char *)
-                                        sqlite3_column_text(statement, 1)];
+                                        sqlite3_column_text(statement, 0)];
                 _mothername.text = mnameField;
+                NSString *mlnameField = [[NSString alloc]
+                                        initWithUTF8String:(const char *)
+                                        sqlite3_column_text(statement, 1)];
+                _motherlast.text = mlnameField;
+                NSString *mageField = [[NSString alloc]
+                                        initWithUTF8String:(const char *)
+                                        sqlite3_column_text(statement, 2)];
+                _motherdob.text = mageField;
+                NSString *cageField = [[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 3)];
+                _childdob.text = cageField;
+                NSString *cweightField = [[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 4)];
+                
+                _childwt.text = cweightField;
+                NSString *csexField = [[NSString alloc]
+                                          initWithUTF8String:(const char *)
+                                          sqlite3_column_text(statement, 5)];
+                
+                _chsex.text = csexField;
                 NSLog(@"Match found");
             } else {
                 NSLog(@"Match not found");

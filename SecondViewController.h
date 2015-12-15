@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 
-@interface SecondViewController : UIViewController<UITextFieldDelegate>
+@interface SecondViewController : UIViewController
 
 
 
@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *reenterpwd;
 
 @property (nonatomic, retain) NSString *struser;
+
+
 
 @property (strong, nonatomic) NSString *databasePath;
 @property (strong, nonatomic) NSString *status;
