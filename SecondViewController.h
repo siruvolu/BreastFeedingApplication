@@ -2,11 +2,12 @@
 //  SecondViewController.h
 //  BreastFeedingApplication
 //
-//  Created by Kancharla, Soumya on 16/11/15.
-//  Copyright © 2015 Kancharla, Soumya. All rights reserved.
+//  Created by Anil Siruvolu on 12/8/15.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 @interface SecondViewController : UIViewController<UITextFieldDelegate>
 
@@ -25,6 +26,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *reenterpwd;
 
 @property (nonatomic, retain) NSString *struser;
+
+@property (strong, nonatomic) NSString *databasePath;
+@property (strong, nonatomic) NSString *status;
+@property (nonatomic) sqlite3 *contactDB;
 
 //- (IBAction)submitfrnew:(id)sender;
 

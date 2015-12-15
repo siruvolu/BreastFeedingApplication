@@ -13,6 +13,8 @@
 @interface SecondViewController ()
 @property (nonatomic, strong) DB *db;
 -(void)loadInfoToEdit;
+- (void)saveData;
+- (void)loadMother;
 @end
 
 @implementation SecondViewController
@@ -22,6 +24,44 @@
     //if ([_struser  isEqualToString:@""] ) {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = dirPaths[0];
+    
+    // Build the path to the database file
+    _databasePath = [[NSString alloc]
+                     initWithString: [docsDir stringByAppendingPathComponent:
+                                      @"bf.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
+    {
+        const char *dbpath = [_databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt =
+            "CREATE TABLE IF NOT EXISTS MOTHER (ID INTEGER PRIMARY KEY AUTOINCREMENT, MNAME TEXT, ADDRESS TEXT, EMAIL TEXT)";
+            
+            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                NSLog(@"Failed to create table");
+            }
+            sqlite3_close(_contactDB);
+        } else {
+            NSLog(@"Failed to open/create database");
+        }
+    }
+    
     self.mothername.delegate = self;
     self.motherlast.delegate = self;
     self.motherdob.delegate = self;
@@ -33,7 +73,7 @@
     self.pwd.delegate = self;
     
     
-    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
+//    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
     
     //}
     //else {
@@ -66,18 +106,20 @@
 -(IBAction)submitbtn:(id)sender
 {
     
-    NSString *query;
+//    NSString *query;
+//    
+//    query = [NSString stringWithFormat:@"insert into mother_details values(null,'%@','%@','%@','%@','%@','%@','%@','%@','%@',0)", self.mothername.text, self.motherlast.text,self.motherdob.text,self.motherpob.text,self.childdob.text,self.childwt.text,self.chsex.text,self.emailid.text,self.pwd.text];
+//    [self.db executeQuery:query];
+//    
+//    // If the query was successfully executed then pop the view controller.
+//    if (self.db.affectedRows != 0) {
+//        NSLog(@"Query was executed successfully. Affected rows = %d", self.db.affectedRows);
+//    }
+//    else{
+//        NSLog(@"Could not execute the query.");
+//    }
     
-    query = [NSString stringWithFormat:@"insert into mother_details values(null,'%@','%@','%@','%@','%@','%@','%@','%@','%@',0)", self.mothername.text, self.motherlast.text,self.motherdob.text,self.motherpob.text,self.childdob.text,self.childwt.text,self.chsex.text,self.emailid.text,self.pwd.text];
-    [self.db executeQuery:query];
     
-    // If the query was successfully executed then pop the view controller.
-    if (self.db.affectedRows != 0) {
-        NSLog(@"Query was executed successfully. Affected rows = %d", self.db.affectedRows);
-    }
-    else{
-        NSLog(@"Could not execute the query.");
-    }
 
     
     if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
@@ -114,6 +156,9 @@
    
         [self presentViewController:alert animated:YES completion:nil];
     }
+    
+    //[self saveData];
+      [self loadMother];
 }
 
 -(void) Submituser {
@@ -205,5 +250,77 @@
     self.emailid.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"csex"]];
     
 }
+
+- (void)saveData{
+{
+    sqlite3_stmt    *statement;
+    const char *dbpath = [_databasePath UTF8String];
+    
+    if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
+    {
+        
+        NSString *insertSQL = [NSString stringWithFormat:
+                               @"INSERT INTO MOTHER (mname, address, email) VALUES (\"%@\", \"%@\", \"%@\")",
+                               _mothername.text, _motherpob.text, _emailid.text];
+        
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(_contactDB, insert_stmt,
+                           -1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            NSLog(@"Mother added");
+            _mothername.text = @"";
+            _motherpob.text = @"";
+            _emailid.text = @"";
+        } else {
+            NSLog(@"Failed to add mother");
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(_contactDB);
+    }
+}}
+
+- (void)loadMother{
+{
+    const char *dbpath = [_databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
+    {
+//        NSString *querySQL = [NSString stringWithFormat:
+//                              @"SELECT address, mname FROM mother WHERE name=\"%@\"",
+//                              _emailid.text];
+        
+        NSString *querySQL = [NSString stringWithFormat:
+                              @"SELECT address, mname FROM mother WHERE email=\"%@\"",
+                                                            _emailid.text];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(_contactDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                NSString *addressField = [[NSString alloc]
+                                          initWithUTF8String:
+                                          (const char *) sqlite3_column_text(
+                                                                             statement, 0)];
+                _motherdob.text = addressField;
+                NSString *mnameField = [[NSString alloc]
+                                        initWithUTF8String:(const char *)
+                                        sqlite3_column_text(statement, 1)];
+                _mothername.text = mnameField;
+                NSLog(@"Match found");
+            } else {
+                NSLog(@"Match not found");
+//                _address.text = @"";
+//                _phone.text = @"";
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(_contactDB);
+    }
+}}
 
 @end
