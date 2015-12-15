@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "LoginViewController.h"
 #import "DB.h"
+#import "GraphViewController.h"
 
 @interface SecondViewController ()
 @property (nonatomic, strong) DB *db;
@@ -91,6 +92,11 @@
     //[self loadInfoToEdit];
     //}
     
+    //            GraphViewController *graphViewController = [[GraphViewController alloc] init];
+//            graphViewController.stremail = _emailid.text; // Set the exposed property
+//    
+//            [self.navigationController pushViewController:graphViewController animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,6 +122,12 @@
 - (IBAction)loadbtn:(id)sender {
     
     [self loadMother];
+    
+    GraphViewController *graphViewController = [[GraphViewController alloc] init];
+    graphViewController.stremail = _emailid.text; // Set the exposed property
+    
+    [self.navigationController pushViewController:graphViewController animated:YES];
+
 }
 
 -(IBAction)submitbtn:(id)sender
@@ -173,6 +185,11 @@
     }
     
     [self saveData];
+    
+//                GraphViewController *graphViewController = [[GraphViewController alloc] init];
+//                graphViewController.stremail = _emailid.text; // Set the exposed property
+//    
+//                [self.navigationController pushViewController:graphViewController animated:YES];
     
 }
 
