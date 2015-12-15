@@ -33,6 +33,13 @@
 @property (strong, nonatomic) NSString *status;
 @property (nonatomic) sqlite3 *contactDB;
 
+- (IBAction)BackTap:(id)sender;
+
+
+
+
+
+
 //- (IBAction)submitfrnew:(id)sender;
 
 //- (IBAction)submitfrnew:(id)sender;

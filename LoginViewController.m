@@ -57,15 +57,18 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
     
-    [self.navigationItem setHidesBackButton:YES animated:YES];
+    //[self.navigationItem setHidesBackButton:YES animated:YES];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"sendemail"]) {
-        SecondViewController *controller = segue.destinationViewController;
-        // set the properties value you want for destination View Controller
-        controller.struser = _username.text;
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"sendemail"]) {
+//        SecondViewController *controller = segue.destinationViewController;
+//        // set the properties value you want for destination View Controller
+//        controller.struser = _username.text;
+//    }
+//}
 
+- (IBAction)Action:(id)sender {
+        [self.view endEditing:YES];
+}
 @end

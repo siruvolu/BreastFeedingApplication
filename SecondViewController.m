@@ -149,7 +149,7 @@
     
     
     
-    if([_mothername.text isEqualToString:@""] && [_motherlast.text isEqualToString:@""] && [_motherdob.text isEqualToString:@""] && [_motherpob.text isEqualToString:@""] && [_childdob.text isEqualToString:@""] && [_childwt.text isEqualToString:@""]&& [_chsex.text isEqualToString:@""] && [_emailid.text isEqualToString:@""] && [_pwd.text isEqualToString:@""] && [_reenterpwd.text isEqualToString:@""])
+    if([_mothername.text isEqualToString:@""] || [_motherlast.text isEqualToString:@""] || [_motherdob.text isEqualToString:@""] || [_motherpob.text isEqualToString:@""] || [_childdob.text isEqualToString:@""] || [_childwt.text isEqualToString:@""]|| [_chsex.text isEqualToString:@""] || [_emailid.text isEqualToString:@""])
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATTENTION!" message:@"You must enter all the fields" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -285,6 +285,8 @@
 
 - (void)saveData{
     {
+        
+        
         sqlite3_stmt    *statement;
         const char *dbpath = [_databasePath UTF8String];
         
@@ -380,5 +382,11 @@
             sqlite3_close(_contactDB);
         }
     }}
+
+- (IBAction)BackTap:(id)sender {
+    
+        [self.view endEditing:YES];
+}
+
 
 @end
