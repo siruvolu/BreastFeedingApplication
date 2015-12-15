@@ -10,7 +10,6 @@
 
 @interface LatchViewController (){
     int lScore, aScore, tScore, cScore, hScore, total;
-    
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *lpick;
 @property (weak, nonatomic) IBOutlet UIPickerView *apick;
@@ -21,9 +20,7 @@
 @property NSArray *lScale, *aScale, *tScale, *cScale, *hScale;
 
 @property (weak, nonatomic) IBOutlet UILabel *totalScore;
-@property (weak, nonatomic) IBOutlet UITextField *lemail;
 
-- (void)saveData;
 @end
 
 @implementation LatchViewController
@@ -200,8 +197,6 @@
     [self.totalArray addObject:newTotal];
     self.totalScore.text = [NSString stringWithFormat:@"%d",total];
     
-       [self saveData];
-    
 }
 
 
@@ -220,43 +215,6 @@
     self.cScale = @[@"Engorged Cracked, bleeding, large blisters or bruises Severe discomfort",@"Filling, Small blisters or bruises Mother complains of pinching Mild/moderate discomfort",@"Soft Tender Intact nipples (no damage)"];
     
     self.hScale = @[@"Full assist (staff holds infant at breast)",@"Minimal assist (i.e. elevate head of bed, place pillows) Teach one side, mother does other. Staff help, mother takes over feeding",@"No assist from staff. Mother able to position/hold infant."];
-    
-    NSString *docsDir;
-    NSArray *dirPaths;
-    
-    // Get the documents directory
-    dirPaths = NSSearchPathForDirectoriesInDomains(
-                                                   NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    docsDir = dirPaths[0];
-    
-    // Build the path to the database file
-    _databasePath = [[NSString alloc]
-                     initWithString: [docsDir stringByAppendingPathComponent:
-                                      @"bf.db"]];
-    
-    NSFileManager *filemgr = [NSFileManager defaultManager];
-    
-    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
-    {
-        const char *dbpath = [_databasePath UTF8String];
-        
-        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
-        {
-            char *errMsg;
-            const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS LATCH (ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT, LSCORE INTEGER)";
-            
-            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
-            {
-                NSLog(@"Failed to create table");
-            }
-            sqlite3_close(_contactDB);
-        } else {
-            NSLog(@"Failed to open/create database");
-        }
-    }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -273,38 +231,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)saveData{
-    {
-        sqlite3_stmt    *statement;
-        const char *dbpath = [_databasePath UTF8String];
-        
-        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
-        {
-            
-            NSString *insertSQL = [NSString stringWithFormat:
-                                   @"INSERT INTO LATCH (email, lscore) VALUES (\"%@\", \"%@\")",
-                                   _lemail.text, _totalScore.text];
-            
-//            NSString *insertSQL = [NSString stringWithFormat:
-//                                   @"INSERT INTO LATCH (lscore) VALUES (\"%@\")",
-//                                    _totalScore.text];
-            
-            const char *insert_stmt = [insertSQL UTF8String];
-            sqlite3_prepare_v2(_contactDB, insert_stmt,
-                               -1, &statement, NULL);
-            if (sqlite3_step(statement) == SQLITE_DONE)
-            {
-                NSLog(@"Score added");
-                //            _mothername.text = @"";
-                //            _motherpob.text = @"";
-                //            _emailid.text = @"";
-            } else {
-                NSLog(@"Failed to add score");
-            }
-            sqlite3_finalize(statement);
-            sqlite3_close(_contactDB);
-        }
-    }}
 
 @end

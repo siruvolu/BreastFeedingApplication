@@ -12,6 +12,5 @@
 @interface GraphViewController : UIViewController
 
 @property (nonatomic) LatchViewController *latchVC;
-@property (nonatomic, retain) NSString *stremail;
 
 @end
