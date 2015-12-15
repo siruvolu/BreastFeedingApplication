@@ -66,7 +66,7 @@
         }
     }
     
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Saved Details!" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Info Saved" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
     
             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
     
