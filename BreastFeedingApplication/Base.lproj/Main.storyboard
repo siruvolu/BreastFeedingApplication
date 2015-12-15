@@ -473,63 +473,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How did your baby grasp your breast? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIQ-Zs-pi3">
-                                <rect key="frame" x="9" y="65" width="343" height="31"/>
+                                <rect key="frame" x="13" y="35" width="343" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2886541326" green="1" blue="0.22243185260000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAv-NG-nbX">
-                                <rect key="frame" x="8" y="50" width="49" height="21"/>
+                                <rect key="frame" x="12" y="20" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did you hear your baby swallow?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nox-kL-EiI">
-                                <rect key="frame" x="9" y="177" width="343" height="21"/>
+                                <rect key="frame" x="12" y="125" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2886541326" green="1" blue="0.22243185260000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AUDIBLE SWALLOWING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvm-ru-YCS">
-                                <rect key="frame" x="9" y="158" width="301" height="21"/>
+                                <rect key="frame" x="12" y="106" width="301" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TYPE OF NIPPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMh-Hx-9vR">
-                                <rect key="frame" x="9" y="257" width="340" height="21"/>
+                                <rect key="frame" x="13" y="193" width="340" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2886541326" green="1" blue="0.22243185260000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COMFORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS6-fI-NnK">
-                                <rect key="frame" x="14" y="323" width="298" height="21"/>
+                                <rect key="frame" x="15" y="263" width="298" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Breast/Nipple)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-h2-54E">
-                                <rect key="frame" x="14" y="343" width="294" height="21"/>
+                                <rect key="frame" x="15" y="283" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2886541326" green="1" blue="0.22243185260000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiX-gr-1iX">
-                                <rect key="frame" x="12" y="274" width="335" height="50"/>
+                                <rect key="frame" x="14" y="215" width="335" height="45"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2As-He-FmU" id="jn3-BW-Krf"/>
                                     <outlet property="delegate" destination="2As-He-FmU" id="A8W-bc-aox"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icb-JW-hAY">
-                                <rect key="frame" x="14" y="372" width="335" height="54"/>
+                                <rect key="frame" x="20" y="307" width="335" height="45"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2As-He-FmU" id="fbT-jN-m58"/>
                                     <outlet property="delegate" destination="2As-He-FmU" id="3Fn-8i-6qW"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP6-PB-MuU">
-                                <rect key="frame" x="14" y="426" width="294" height="21"/>
+                                <rect key="frame" x="19" y="349" width="294" height="21"/>
                                 <string key="text">HOLD (Positioning)
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -537,51 +537,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot0-at-k8J">
-                                <rect key="frame" x="14" y="445" width="294" height="21"/>
+                                <rect key="frame" x="19" y="368" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFE-5J-ZVI">
-                                <rect key="frame" x="6" y="509" width="347" height="63"/>
+                                <rect key="frame" x="12" y="430" width="347" height="45"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2As-He-FmU" id="qOb-cr-0LN"/>
                                     <outlet property="delegate" destination="2As-He-FmU" id="hxD-dW-9a0"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJJ-Dd-2MT">
-                                <rect key="frame" x="320" y="583" width="18" height="21"/>
+                                <rect key="frame" x="300" y="486" width="18" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YuO-Xm-5lO">
-                                <rect key="frame" x="8" y="96" width="335" height="56"/>
+                                <rect key="frame" x="12" y="61" width="335" height="45"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2As-He-FmU" id="jOc-KJ-qiD"/>
                                     <outlet property="delegate" destination="2As-He-FmU" id="S0L-6U-Whs"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUL-M6-zIo">
-                                <rect key="frame" x="14" y="199" width="335" height="55"/>
+                                <rect key="frame" x="14" y="145" width="335" height="45"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2As-He-FmU" id="H56-wT-UUd"/>
                                     <outlet property="delegate" destination="2As-He-FmU" id="bOW-Hc-ule"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did someone help you put your baby to breast? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV5-eo-yAs">
-                                <rect key="frame" x="12" y="463" width="335" height="43"/>
+                                <rect key="frame" x="17" y="386" width="335" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2886541326" green="1" blue="0.22243185260000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCa-j5-Z08">
-                                <rect key="frame" x="8" y="580" width="175" height="30"/>
+                                <rect key="frame" x="12" y="483" width="175" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN7-8g-obn">
-                                <rect key="frame" x="239" y="579" width="34" height="30"/>
+                                <rect key="frame" x="213" y="483" width="34" height="30"/>
                                 <state key="normal" title="Total"/>
                                 <connections>
                                     <action selector="Total:" destination="2As-He-FmU" eventType="touchUpInside" id="kKM-Xi-MaY"/>

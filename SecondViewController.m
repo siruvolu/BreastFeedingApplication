@@ -78,6 +78,7 @@
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> siruvolu
     self.mothername.delegate = self;
     self.motherlast.delegate = self;
@@ -90,6 +91,9 @@
     self.pwd.delegate = self;
 =======
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Saved Details!" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
+=======
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Info Saved" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
+>>>>>>> siruvolu
     
             UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
     
