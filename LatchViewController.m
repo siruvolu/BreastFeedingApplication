@@ -266,14 +266,6 @@
             NSLog(@"Failed to open/create database");
         }
     }
-    
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Before starting!" message:@"Enter the email to store data" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
-    
-    [alert addAction:defaultAction];
-    
-    [self presentViewController:alert animated:YES completion:nil];
 
 }
 
