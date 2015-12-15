@@ -211,25 +211,15 @@
     
     self.totalArray = [[NSMutableArray alloc]init];
     
-    self.lScale = @[@"No latch obtained",@"Repeated attempts",@"Rhythmic suckling"];
+    self.lScale = @[@"Too sleepy or reluctant, No latch obtained",@"Repeated attempts Must hold nipple in mouth Must stimulate to suck",@"Grasps breast, Tongue down and forward, Lips flanged,Rhythmic suckling"];
     
-    self.aScale = @[@"None",@"A few with stimulation",@"Spontaneous"];
+    self.aScale = @[@"None",@"A few with stimulation",@"Spontaneous, intermittent (less than 24 hours old) Spontaneous, frequent (greater than 24 hours old)"];
     
-    self.tScale = @[@"Inverted",@"Flat",@"Everted"];
+    self.tScale = @[@"Inverted",@"Flat",@"Everted (after stimulation)"];
     
-    self.cScale = @[@"Engorged Cracked",@"Filling",@"Soft Tender Intact nipples"];
+    self.cScale = @[@"Engorged Cracked, bleeding, large blisters or bruises Severe discomfort",@"Filling, Small blisters or bruises Mother complains of pinching Mild/moderate discomfort",@"Soft Tender Intact nipples (no damage)"];
     
-    self.hScale = @[@"Full assist",@"Minimal assist",@"No assist"];
-    
-//    self.lScale = @[@"Too sleepy or reluctant, No latch obtained",@"Repeated attempts Must hold nipple in mouth Must stimulate to suck",@"Grasps breast, Tongue down and forward, Lips flanged,Rhythmic suckling"];
-//    
-//    self.aScale = @[@"None",@"A few with stimulation",@"Spontaneous, intermittent (less than 24 hours old) Spontaneous, frequent (greater than 24 hours old)"];
-//    
-//    self.tScale = @[@"Inverted",@"Flat",@"Everted (after stimulation)"];
-//    
-//    self.cScale = @[@"Engorged Cracked, bleeding, large blisters or bruises Severe discomfort",@"Filling, Small blisters or bruises Mother complains of pinching Mild/moderate discomfort",@"Soft Tender Intact nipples (no damage)"];
-//    
-//    self.hScale = @[@"Full assist (staff holds infant at breast)",@"Minimal assist (i.e. elevate head of bed, place pillows) Teach one side, mother does other. Staff help, mother takes over feeding",@"No assist from staff. Mother able to position/hold infant."];
+    self.hScale = @[@"Full assist (staff holds infant at breast)",@"Minimal assist (i.e. elevate head of bed, place pillows) Teach one side, mother does other. Staff help, mother takes over feeding",@"No assist from staff. Mother able to position/hold infant."];
     
     NSString *docsDir;
     NSArray *dirPaths;
