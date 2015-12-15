@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *tpick;
 @property (weak, nonatomic) IBOutlet UIPickerView *cpick;
 @property (weak, nonatomic) IBOutlet UIPickerView *hpick;
-@property (weak, nonatomic) IBOutlet UIPickerView *history;
 
 @property NSArray *lScale, *aScale, *tScale, *cScale, *hScale;
 
@@ -45,9 +44,7 @@
     if (pickerView == self.hpick) {
         return 1;
     }
-    if (pickerView == self.history) {
-        return 1;
-    }
+   
     
     return 0;
     
@@ -327,49 +324,5 @@
             sqlite3_close(_contactDB);
         }
     }}
-
-- (void)loadData{
-    {
-        const char *dbpath = [_databasePath UTF8String];
-        sqlite3_stmt    *statement;
-        
-        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
-        {
-            //        NSString *querySQL = [NSString stringWithFormat:
-            //                              @"SELECT address, mname FROM mother WHERE name=\"%@\"",
-            //                              _emailid.text];
-            
-            //        NSString *querySQL = [NSString stringWithFormat:
-            //                              @"SELECT address, mname FROM mother WHERE email=\"%@\"",
-            //                                                            _emailid.text];
-            
-            NSString *querySQL = [NSString stringWithFormat:
-                                  @"SELECT lscore FROM latch WHERE email=\"%@\"",
-                                  _lemail.text];
-            
-            const char *query_stmt = [querySQL UTF8String];
-            
-            NSMutableArray *history = [[NSMutableArray alloc]init];
-            
-            if (sqlite3_prepare_v2(_contactDB,
-                                   query_stmt, -1, &statement, NULL) == SQLITE_OK)
-            {
-                if (sqlite3_step(statement) == SQLITE_ROW)
-                {
-                    NSString *hist = [[NSString alloc] initWithUTF8String:
-                                          (const char *) sqlite3_column_text(statement, 0)];
-                    [history addObject:hist];
-                    NSLog(@"Match found");
-                } else {
-                    NSLog(@"Match not found");
-                    //                _address.text = @"";
-                    //                _phone.text = @"";
-                }
-                sqlite3_finalize(statement);
-            }
-            sqlite3_close(_contactDB);
-        }
-    }}
-
 
 @end
