@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController<UITextFieldDelegate>
 
 
 
@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailid;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 @property (weak, nonatomic) IBOutlet UITextField *reenterpwd;
+
+@property (nonatomic, retain) NSString *struser;
 
 //- (IBAction)submitfrnew:(id)sender;
 

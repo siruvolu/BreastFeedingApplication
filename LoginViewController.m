@@ -3,13 +3,15 @@
 //  BreastFeedingApplication
 //
 //  Created by Balasubramanian, Srinivas B on 12/8/15.
-//  Copyright © 2015 Prateek Panjwani. All rights reserved.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import "LoginViewController.h"
+#import "SecondViewController.h"
+#import "DB.h"
 
 @interface LoginViewController ()
-
+@property (nonatomic, strong) DB *db;
 @end
 
 @implementation LoginViewController
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+ self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
 }
 -(IBAction)login:(id)sender
 {
@@ -28,6 +31,8 @@
         
         //[alert addAction:defaultAction];
        // [self presentViewController:alert animated:YES completion:nil];
+        SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        secondViewController.struser = _username.text;
     }
     
     else{
