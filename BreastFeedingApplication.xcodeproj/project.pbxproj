@@ -11,15 +11,8 @@
 		0441724A1C181D720059A7E2 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172471C181D720059A7E2 /* Color.m */; };
 		0441724B1C181D720059A7E2 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172491C181D720059A7E2 /* LineChart.m */; };
 		0441724D1C1826A90059A7E2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0441724C1C1826A90059A7E2 /* MessageUI.framework */; };
-<<<<<<< HEAD
-		04F664B41C1E06E400B59433 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F664B31C1E06E400B59433 /* DB.m */; };
-=======
 		048DE52A1C1FCFAA00EA1886 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE5291C1FCFAA00EA1886 /* DB.m */; };
-<<<<<<< HEAD
->>>>>>> siruvolu
-=======
 		048DE52D1C200F7800EA1886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE52B1C200F7800EA1886 /* Main.storyboard */; };
->>>>>>> siruvolu
 		80E1615A1BF9FAA0005460C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161591BF9FAA0005460C7 /* main.m */; };
 		80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615C1BF9FAA0005460C7 /* AppDelegate.m */; };
 		80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615F1BF9FAA0005460C7 /* FirstViewController.m */; };
@@ -72,17 +65,9 @@
 		044172481C181D720059A7E2 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
 		044172491C181D720059A7E2 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
 		0441724C1C1826A90059A7E2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-		04F664B21C1E06E400B59433 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
-		04F664B31C1E06E400B59433 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
-=======
 		048DE5281C1FCFAA00EA1886 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
 		048DE5291C1FCFAA00EA1886 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
->>>>>>> siruvolu
-=======
 		048DE52C1C200F7800EA1886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BreastFeedingApplication/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
->>>>>>> siruvolu
 		80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastFeedingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161591BF9FAA0005460C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80E1615B1BF9FAA0005460C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,8 +207,6 @@
 				80E161951BF9FC04005460C7 /* QuoteViewController.m */,
 				80E161971BF9FC20005460C7 /* FaqViewController.h */,
 				80E161981BF9FC20005460C7 /* FaqViewController.m */,
-				04F664B21C1E06E400B59433 /* DB.h */,
-				04F664B31C1E06E400B59433 /* DB.m */,
 			);
 			path = BreastFeedingApplication;
 			sourceTree = "<group>";
@@ -460,11 +443,7 @@
 				80E1615A1BF9FAA0005460C7 /* main.m in Sources */,
 				DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */,
 				044172381C180C510059A7E2 /* LatchViewController.m in Sources */,
-<<<<<<< HEAD
-				04F664B41C1E06E400B59433 /* DB.m in Sources */,
-=======
 				048DE52A1C1FCFAA00EA1886 /* DB.m in Sources */,
->>>>>>> siruvolu
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

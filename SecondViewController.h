@@ -9,17 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-@interface SecondViewController : UIViewController<UITextFieldDelegate>
->>>>>>> siruvolu
-=======
 @interface SecondViewController : UIViewController
->>>>>>> siruvolu
 
-
-@interface SecondViewController : UIViewController<UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIButton *submitbtn;
@@ -36,22 +27,13 @@
 
 @property (nonatomic, retain) NSString *struser;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-@property (nonatomic) int recordIDToEdit;
-=======
-=======
 
 
->>>>>>> siruvolu
 @property (strong, nonatomic) NSString *databasePath;
 @property (strong, nonatomic) NSString *status;
 @property (nonatomic) sqlite3 *contactDB;
->>>>>>> siruvolu
 
 //- (IBAction)submitfrnew:(id)sender;
 
 //- (IBAction)submitfrnew:(id)sender;
 @end
-
-

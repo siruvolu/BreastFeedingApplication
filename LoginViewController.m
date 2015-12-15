@@ -11,15 +11,7 @@
 #import "DB.h"
 
 @interface LoginViewController ()
-<<<<<<< HEAD
-
 @property (nonatomic, strong) DB *db;
-
-
-
-=======
-@property (nonatomic, strong) DB *db;
->>>>>>> siruvolu
 @end
 
 @implementation LoginViewController
@@ -27,18 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-<<<<<<< HEAD
-<<<<<<< HEAD
-    self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
+    // self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
     
-=======
- self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
->>>>>>> siruvolu
-=======
-// self.db = [[DB alloc] initWithDatabaseFilename:@"bfeed.sqlite"];
-     
-
->>>>>>> siruvolu
+    
 }
 -(IBAction)login:(id)sender
 {
@@ -46,32 +29,23 @@
     {
         //UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Correct"                                                                       message:@"Welcome" preferredStyle:UIAlertControllerStyleAlert];
         
-       // UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+        // UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
         
         //[alert addAction:defaultAction];
-       // [self presentViewController:alert animated:YES completion:nil];
-<<<<<<< HEAD
-        SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-        secondViewController.struser = _username.text;
-<<<<<<< HEAD
-        //[self.navigationController pushViewController:secondViewController animated:YES];
-=======
->>>>>>> siruvolu
-=======
-//        SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-//        secondViewController.struser = _username.text;
+        // [self presentViewController:alert animated:YES completion:nil];
+        //        SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        //        secondViewController.struser = _username.text;
         
-//         self.username.delegate = self;
-////        
-//         NSLog(@"Your data: %@", _username.text);
-//        SecondViewController *secondViewController = [[SecondViewController alloc] init];
-//        secondViewController.struser = _username.text; // Set the exposed property
-//       
-//        [self.navigationController pushViewController:secondViewController animated:YES];
+        //         self.username.delegate = self;
+        ////
+        //         NSLog(@"Your data: %@", _username.text);
+        //        SecondViewController *secondViewController = [[SecondViewController alloc] init];
+        //        secondViewController.struser = _username.text; // Set the exposed property
+        //
+        //        [self.navigationController pushViewController:secondViewController animated:YES];
         
-//       [self performSegueWithIdentifier:@"sendemail" sender:self];
+        //       [self performSegueWithIdentifier:@"sendemail" sender:self];
         
->>>>>>> siruvolu
     }
     
     else{
@@ -82,16 +56,16 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
- 
+    
     [self.navigationItem setHidesBackButton:YES animated:YES];
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"sendemail"]) {
-//        SecondViewController *controller = segue.destinationViewController;
-//        // set the properties value you want for destination View Controller
-//        controller.struser = _username.text;
-//                              }
-//                              }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"sendemail"]) {
+        SecondViewController *controller = segue.destinationViewController;
+        // set the properties value you want for destination View Controller
+        controller.struser = _username.text;
+    }
+}
 
 @end
