@@ -38,6 +38,10 @@
 		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; };
 		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; };
 		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; };
+		E849D3651C20A99200889242 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D35E1C20A99200889242 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E849D3661C20A99200889242 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3601C20A99200889242 /* MasterTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E849D3671C20A99200889242 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3621C20A99200889242 /* Patient.m */; settings = {ASSET_TAGS = (); }; };
+		E849D3681C20A99200889242 /* PatientDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3641C20A99200889242 /* PatientDirectory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,14 @@
 		DD685B1E1C19D2D10017CA9D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		DD685B1F1C19D2D10017CA9D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
 		DD685B201C19D2D10017CA9D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
+		E849D35D1C20A99200889242 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E849D35E1C20A99200889242 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E849D35F1C20A99200889242 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
+		E849D3601C20A99200889242 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
+		E849D3611C20A99200889242 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		E849D3621C20A99200889242 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		E849D3631C20A99200889242 /* PatientDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDirectory.h; sourceTree = "<group>"; };
+		E849D3641C20A99200889242 /* PatientDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDirectory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,14 @@
 		80E1614C1BF9FAA0005460C7 = {
 			isa = PBXGroup;
 			children = (
+				E849D35D1C20A99200889242 /* DetailViewController.h */,
+				E849D35E1C20A99200889242 /* DetailViewController.m */,
+				E849D35F1C20A99200889242 /* MasterTableViewController.h */,
+				E849D3601C20A99200889242 /* MasterTableViewController.m */,
+				E849D3611C20A99200889242 /* Patient.h */,
+				E849D3621C20A99200889242 /* Patient.m */,
+				E849D3631C20A99200889242 /* PatientDirectory.h */,
+				E849D3641C20A99200889242 /* PatientDirectory.m */,
 				048DE5281C1FCFAA00EA1886 /* DB.h */,
 				048DE5291C1FCFAA00EA1886 /* DB.m */,
 				0441724C1C1826A90059A7E2 /* MessageUI.framework */,
@@ -428,8 +448,12 @@
 				AE461B981C048D63004DEEB6 /* DataModel.m in Sources */,
 				DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */,
 				80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */,
+				E849D3661C20A99200889242 /* MasterTableViewController.m in Sources */,
 				AE3FA9101C04A9A000EAE29A /* FMDatabaseQueue.m in Sources */,
 				AE3FA9111C04A9A000EAE29A /* FMDatabaseAdditions.m in Sources */,
+				E849D3651C20A99200889242 /* DetailViewController.m in Sources */,
+				E849D3671C20A99200889242 /* Patient.m in Sources */,
+				E849D3681C20A99200889242 /* PatientDirectory.m in Sources */,
 				AE461BB21C048D74004DEEB6 /* Syncdata.m in Sources */,
 				AE3FA9121C04A9A000EAE29A /* FMDatabasePool.m in Sources */,
 				DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */,
