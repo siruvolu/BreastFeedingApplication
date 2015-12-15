@@ -10,8 +10,12 @@
 #import <sqlite3.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @interface SecondViewController : UIViewController<UITextFieldDelegate>
+>>>>>>> siruvolu
+=======
+@interface SecondViewController : UIViewController
 >>>>>>> siruvolu
 
 
@@ -33,8 +37,13 @@
 @property (nonatomic, retain) NSString *struser;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @property (nonatomic) int recordIDToEdit;
 =======
+=======
+
+
+>>>>>>> siruvolu
 @property (strong, nonatomic) NSString *databasePath;
 @property (strong, nonatomic) NSString *status;
 @property (nonatomic) sqlite3 *contactDB;
