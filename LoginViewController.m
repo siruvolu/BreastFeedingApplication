@@ -11,7 +11,7 @@
 #import "DB.h"
 
 @interface LoginViewController ()
-@property (nonatomic, strong) DB *db;
+
 @end
 
 @implementation LoginViewController
@@ -66,6 +66,14 @@
 //        // set the properties value you want for destination View Controller
 //        controller.struser = _username.text;
 //    }
+//}
+//- (IBAction)signup:(id)sender {
+//    
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
+//    //[self presentViewController:alert animated:YES completion:nil];
 //}
 
 - (IBAction)Action:(id)sender {

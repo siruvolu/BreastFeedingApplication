@@ -7,6 +7,7 @@
 //
 
 #import "LatchViewController.h"
+#import "SecondViewController.h"
 
 @interface LatchViewController (){
     int lScore, aScore, tScore, cScore, hScore, total;
@@ -277,6 +278,9 @@
     [alert addAction:defaultAction];
     
     [self presentViewController:alert animated:YES completion:nil];
+    
+    SecondViewController *svc = (SecondViewController *)[self.tabBarController.viewControllers objectAtIndex:0];
+    _lemail.text = svc.emailid.text;
     
 }
 

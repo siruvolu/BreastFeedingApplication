@@ -8,8 +8,9 @@
 
 #import <XCTest/XCTest.h>
 
-@interface BreastFeedingApplicationUITests : XCTestCase
 
+@interface BreastFeedingApplicationUITests : XCTestCase
+//@property SecondViewController *svc;
 @end
 
 @implementation BreastFeedingApplicationUITests
@@ -17,6 +18,7 @@
 - (void)setUp {
     [super setUp];
     
+    //SecondViewController *svc
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -35,6 +37,19 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [[[[[app.otherElements containingType:XCUIElementTypeStaticText identifier:@"     BreastFeeding App"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Sign Up"] elementBoundByIndex:1] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma@example.com"];
+    [app.buttons[@"Load"] tap];
+    
 }
+
+
 
 @end

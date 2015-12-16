@@ -11,8 +11,12 @@
 		0441724A1C181D720059A7E2 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172471C181D720059A7E2 /* Color.m */; };
 		0441724B1C181D720059A7E2 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 044172491C181D720059A7E2 /* LineChart.m */; };
 		0441724D1C1826A90059A7E2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0441724C1C1826A90059A7E2 /* MessageUI.framework */; };
-		048DE52A1C1FCFAA00EA1886 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DE5291C1FCFAA00EA1886 /* DB.m */; };
 		048DE52D1C200F7800EA1886 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE52B1C200F7800EA1886 /* Main.storyboard */; };
+		47AB536D1C20D31C00C5CF31 /* svcLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB536C1C20D31C00C5CF31 /* svcLoad.m */; settings = {ASSET_TAGS = (); }; };
+		47AB53701C21E14500C5CF31 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB536F1C21E14500C5CF31 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		47AB53731C21E1A700C5CF31 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53721C21E1A700C5CF31 /* MasterTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		47AB53761C21E1F500C5CF31 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53751C21E1F500C5CF31 /* Patient.m */; settings = {ASSET_TAGS = (); }; };
+		47AB53791C21E22900C5CF31 /* PatientDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53781C21E22900C5CF31 /* PatientDirectory.m */; settings = {ASSET_TAGS = (); }; };
 		80E1615A1BF9FAA0005460C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161591BF9FAA0005460C7 /* main.m */; };
 		80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615C1BF9FAA0005460C7 /* AppDelegate.m */; };
 		80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615F1BF9FAA0005460C7 /* FirstViewController.m */; };
@@ -38,10 +42,6 @@
 		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; };
 		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; };
 		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; };
-		E849D3651C20A99200889242 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D35E1C20A99200889242 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E849D3661C20A99200889242 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3601C20A99200889242 /* MasterTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E849D3671C20A99200889242 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3621C20A99200889242 /* Patient.m */; settings = {ASSET_TAGS = (); }; };
-		E849D3681C20A99200889242 /* PatientDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = E849D3641C20A99200889242 /* PatientDirectory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,16 @@
 		044172481C181D720059A7E2 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
 		044172491C181D720059A7E2 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
 		0441724C1C1826A90059A7E2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		048DE5281C1FCFAA00EA1886 /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
-		048DE5291C1FCFAA00EA1886 /* DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DB.m; sourceTree = "<group>"; };
 		048DE52C1C200F7800EA1886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BreastFeedingApplication/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47AB536C1C20D31C00C5CF31 /* svcLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcLoad.m; sourceTree = "<group>"; };
+		47AB536E1C21E14500C5CF31 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		47AB536F1C21E14500C5CF31 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		47AB53711C21E1A700C5CF31 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
+		47AB53721C21E1A700C5CF31 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
+		47AB53741C21E1F500C5CF31 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		47AB53751C21E1F500C5CF31 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		47AB53771C21E22900C5CF31 /* PatientDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDirectory.h; sourceTree = "<group>"; };
+		47AB53781C21E22900C5CF31 /* PatientDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDirectory.m; sourceTree = "<group>"; };
 		80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastFeedingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161591BF9FAA0005460C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80E1615B1BF9FAA0005460C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,14 +127,6 @@
 		DD685B1E1C19D2D10017CA9D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		DD685B1F1C19D2D10017CA9D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
 		DD685B201C19D2D10017CA9D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
-		E849D35D1C20A99200889242 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		E849D35E1C20A99200889242 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		E849D35F1C20A99200889242 /* MasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableViewController.h; sourceTree = "<group>"; };
-		E849D3601C20A99200889242 /* MasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableViewController.m; sourceTree = "<group>"; };
-		E849D3611C20A99200889242 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
-		E849D3621C20A99200889242 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
-		E849D3631C20A99200889242 /* PatientDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDirectory.h; sourceTree = "<group>"; };
-		E849D3641C20A99200889242 /* PatientDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDirectory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,16 +161,14 @@
 		80E1614C1BF9FAA0005460C7 = {
 			isa = PBXGroup;
 			children = (
-				E849D35D1C20A99200889242 /* DetailViewController.h */,
-				E849D35E1C20A99200889242 /* DetailViewController.m */,
-				E849D35F1C20A99200889242 /* MasterTableViewController.h */,
-				E849D3601C20A99200889242 /* MasterTableViewController.m */,
-				E849D3611C20A99200889242 /* Patient.h */,
-				E849D3621C20A99200889242 /* Patient.m */,
-				E849D3631C20A99200889242 /* PatientDirectory.h */,
-				E849D3641C20A99200889242 /* PatientDirectory.m */,
-				048DE5281C1FCFAA00EA1886 /* DB.h */,
-				048DE5291C1FCFAA00EA1886 /* DB.m */,
+				47AB53771C21E22900C5CF31 /* PatientDirectory.h */,
+				47AB53781C21E22900C5CF31 /* PatientDirectory.m */,
+				47AB53741C21E1F500C5CF31 /* Patient.h */,
+				47AB53751C21E1F500C5CF31 /* Patient.m */,
+				47AB53711C21E1A700C5CF31 /* MasterTableViewController.h */,
+				47AB53721C21E1A700C5CF31 /* MasterTableViewController.m */,
+				47AB536E1C21E14500C5CF31 /* DetailViewController.h */,
+				47AB536F1C21E14500C5CF31 /* DetailViewController.m */,
 				0441724C1C1826A90059A7E2 /* MessageUI.framework */,
 				044172461C181D720059A7E2 /* Color.h */,
 				044172471C181D720059A7E2 /* Color.m */,
@@ -254,6 +251,7 @@
 			children = (
 				80E161801BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m */,
 				80E161821BF9FAA1005460C7 /* Info.plist */,
+				47AB536C1C20D31C00C5CF31 /* svcLoad.m */,
 			);
 			path = BreastFeedingApplicationUITests;
 			sourceTree = "<group>";
@@ -445,15 +443,12 @@
 			files = (
 				80E161931BF9FBD4005460C7 /* ContactViewController.m in Sources */,
 				0441724A1C181D720059A7E2 /* Color.m in Sources */,
+				47AB53761C21E1F500C5CF31 /* Patient.m in Sources */,
 				AE461B981C048D63004DEEB6 /* DataModel.m in Sources */,
 				DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */,
 				80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */,
-				E849D3661C20A99200889242 /* MasterTableViewController.m in Sources */,
 				AE3FA9101C04A9A000EAE29A /* FMDatabaseQueue.m in Sources */,
 				AE3FA9111C04A9A000EAE29A /* FMDatabaseAdditions.m in Sources */,
-				E849D3651C20A99200889242 /* DetailViewController.m in Sources */,
-				E849D3671C20A99200889242 /* Patient.m in Sources */,
-				E849D3681C20A99200889242 /* PatientDirectory.m in Sources */,
 				AE461BB21C048D74004DEEB6 /* Syncdata.m in Sources */,
 				AE3FA9121C04A9A000EAE29A /* FMDatabasePool.m in Sources */,
 				DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */,
@@ -463,11 +458,13 @@
 				80E161901BF9FB9A005460C7 /* GraphViewController.m in Sources */,
 				80E161991BF9FC20005460C7 /* FaqViewController.m in Sources */,
 				80E161961BF9FC04005460C7 /* QuoteViewController.m in Sources */,
+				47AB53731C21E1A700C5CF31 /* MasterTableViewController.m in Sources */,
 				AE3FA90E1C04A9A000EAE29A /* FMDatabase.m in Sources */,
 				80E1615A1BF9FAA0005460C7 /* main.m in Sources */,
 				DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */,
 				044172381C180C510059A7E2 /* LatchViewController.m in Sources */,
-				048DE52A1C1FCFAA00EA1886 /* DB.m in Sources */,
+				47AB53701C21E14500C5CF31 /* DetailViewController.m in Sources */,
+				47AB53791C21E22900C5CF31 /* PatientDirectory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47AB536D1C20D31C00C5CF31 /* svcLoad.m in Sources */,
 				80E161811BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +661,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = BreastFeedingApplicationUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplicationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = BreastFeedingApplicationUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplicationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

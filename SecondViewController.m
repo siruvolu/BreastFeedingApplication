@@ -12,7 +12,7 @@
 #import "GraphViewController.h"
 
 @interface SecondViewController ()
-@property (nonatomic, strong) DB *db;
+
 -(void)loadInfoToEdit;
 - (void)saveData;
 - (void)loadMother;
@@ -29,6 +29,11 @@
     //NSLog(@"Your data: %@", _struser);
     //     self.emailid.text = self.struser;
     //    NSLog(@"Your data: %@", self.emailid.text);
+    
+            [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
+            [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
+            [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
+            [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
     
     NSString *docsDir;
     NSArray *dirPaths;
@@ -151,6 +156,8 @@
     
     if([_mothername.text isEqualToString:@""] || [_motherlast.text isEqualToString:@""] || [_motherdob.text isEqualToString:@""] || [_motherpob.text isEqualToString:@""] || [_childdob.text isEqualToString:@""] || [_childwt.text isEqualToString:@""]|| [_chsex.text isEqualToString:@""] || [_emailid.text isEqualToString:@""])
     {
+       
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATTENTION!" message:@"You must enter all the fields" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
@@ -158,21 +165,27 @@
         [alert addAction:defaultAction];
         
         //To disable tab bars
-        
-        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
-        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
+//        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
+//        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
+//        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
+//        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
         [self presentViewController:alert animated:YES completion:nil];
+        
+        
         
     }
     
-    else if ([_pwd.text isEqualToString:_reenterpwd.text]) {
-        NSLog(@"Password Match");
-        [self Submituser];
+    else{
+        //NSLog(@"Password Match");
+        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
+        //[self Submituser];
+        [self saveData];
         
     }
-    else {
+    
         //        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Sorry !" message:@"Password does not match" preferredStyle:UIAlertControllerStyleAlert];
         //
         //        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
@@ -182,9 +195,9 @@
         //        [alert addAction:defaultAction];
         //
         //        [self presentViewController:alert animated:YES completion:nil];
-    }
     
-    [self saveData];
+    
+    
     
     //                GraphViewController *graphViewController = [[GraphViewController alloc] init];
     //                graphViewController.stremail = _emailid.text; // Set the exposed property
@@ -219,10 +232,10 @@
     
     // To enable tab bars
     
-    [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
-    [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
+//    [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
     
     [self presentViewController:success animated:YES completion:nil];
     
@@ -263,25 +276,7 @@
      */
 }
 
--(void)loadInfoToEdit{
-    // Create the query.
-    NSString *query = [NSString stringWithFormat:@"select * from mother_details where email=%@", self.struser];
-    
-    NSLog(@"%@",self.struser);
-    
-    // Load the relevant data.
-    NSArray *results = [[NSArray alloc] initWithArray:[self.db loadDataFromDB:query]];
-    
-    // Set the loaded data to the textfields.
-    self.mothername.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mfname"]];
-    self.motherlast.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mlname"]];
-    self.motherdob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"mage"]];
-    self.motherpob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"address"]];
-    self.childdob.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"cage"]];
-    self.childwt.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"cweight"]];
-    self.emailid.text = [[results objectAtIndex:0] objectAtIndex:[self.db.arrColumnNames indexOfObject:@"csex"]];
-    
-}
+
 
 - (void)saveData{
     {
@@ -344,7 +339,7 @@
                                               initWithUTF8String:
                                               (const char *) sqlite3_column_text(
                                                                                  statement, 6)];
-                    _motherdob.text = addressField;
+                    _motherpob.text = addressField;
                     NSString *mnameField = [[NSString alloc]
                                             initWithUTF8String:(const char *)
                                             sqlite3_column_text(statement, 0)];
