@@ -3,11 +3,12 @@
 //  BreastFeedingApplication
 //
 //  Created by Siruvolu, Sai Anil on 12/15/15.
-//  Copyright © 2015 Prateek Panjwani. All rights reserved.
+//  Copyright © 2015 Anil Siruvolu. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import "SecondViewController.h"
+
 
 @interface svcLoad : XCTestCase
 
@@ -37,61 +38,102 @@
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.textFields[@"Username"] typeText:@"wq"];
-    
-    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
-    [passwordSecureTextField tap];
-    [passwordSecureTextField typeText:@"a"];
-    [app.buttons[@"Login"] tap];
-    [app.alerts[@"Incorrect"].collectionViews.buttons[@"OK"] tap];
-    
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    [app.textFields[@"Username"] typeText:@"wq"];
+//    
+//    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+//    [passwordSecureTextField tap];
+//    [passwordSecureTextField typeText:@"a"];
+//    [app.buttons[@"Login"] tap];
+//    [app.alerts[@"Incorrect"].collectionViews.buttons[@"OK"] tap];
+//    
 }
 
+
 -(void)testSave {
-    
-    
-    
-    
-    
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [[[[[app.otherElements containingType:XCUIElementTypeStaticText identifier:@"     BreastFeeding App"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Sign Up"] elementBoundByIndex:1] tap];
-    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
-    
-    XCUIElement *emailTextField = app.textFields[@"Email"];
-    [emailTextField tap];
-    [emailTextField typeText:@"amma@example.com"];
-    
-    XCUIElement *motherFirstNameTextField = app.textFields[@"Mother First Name"];
-    [motherFirstNameTextField tap];
-    [motherFirstNameTextField typeText:@"amma"];
-    
-    XCUIElement *motherLastNameTextField = app.textFields[@"Mother Last Name"];
-    [motherLastNameTextField tap];
-    [motherLastNameTextField typeText:@"a"];
-    
-    XCUIElement *motherAgeTextField = app.textFields[@"Mother Age"];
-    [motherAgeTextField tap];
-    [motherAgeTextField typeText:@"n"];
-    
-    XCUIElement *addressTextField = app.textFields[@"Address"];
-    [addressTextField tap];
-    [addressTextField typeText:@"f"];
-    
-    XCUIElement *childAgeMonthsTextField = app.textFields[@"Child Age (Months)"];
-    [childAgeMonthsTextField tap];
-    [childAgeMonthsTextField typeText:@"s"];
-    
-    XCUIElement *childWeightLbsTextField = app.textFields[@"Child Weight (lbs)"];
-    [childWeightLbsTextField tap];
-    [childWeightLbsTextField typeText:@"k"];
-    
-    XCUIElement *childSexTextField = app.textFields[@"Child Sex"];
-    [childSexTextField tap];
-    [childSexTextField typeText:@"r"];
-    [app.buttons[@"Save"] tap];
-    
-    
+
+XCUIApplication *app = [[XCUIApplication alloc] init];
+XCUIElement *usernameTextField = app.textFields[@"Username"];
+[usernameTextField tap];
+[usernameTextField typeText:@"amma"];
+
+XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+[passwordSecureTextField tap];
+
+XCUIElement *shiftButton = app.buttons[@"shift"];
+[shiftButton tap];
+[passwordSecureTextField typeText:@"Password"];
+
+XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+
+[moreNumbersKey tap];
+[passwordSecureTextField typeText:@"1"];
+[app.buttons[@"Login"] tap];
+
+XCUIElement *okButton = app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"];
+
+[okButton tap];
+
+XCUIElement *emailTextField = app.textFields[@"Email"];
+[emailTextField tap];
+[emailTextField typeText:@"amma"];
+
+[moreNumbersKey tap];
+[emailTextField typeText:@"@"];
+
+XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+
+[moreLettersKey tap];
+[emailTextField typeText:@"example"];
+
+[moreNumbersKey tap];
+[emailTextField typeText:@"."];
+
+[moreLettersKey tap];
+[emailTextField typeText:@"com"];
+
+XCUIElement *motherFirstNameTextField = app.textFields[@"Mother First Name"];
+[motherFirstNameTextField tap];
+[motherFirstNameTextField typeText:@"amma"];
+
+XCUIElement *motherLastNameTextField = app.textFields[@"Mother Last Name"];
+[motherLastNameTextField tap];
+[motherLastNameTextField typeText:@"s"];
+
+XCUIElement *motherAgeTextField = app.textFields[@"Mother Age"];
+[motherAgeTextField tap];
+[moreNumbersKey tap];
+
+[motherAgeTextField typeText:@"33"];
+
+XCUIElement *addressTextField = app.textFields[@"Address"];
+[addressTextField tap];
+
+[moreNumbersKey tap];
+[addressTextField typeText:@"2922"];
+
+XCUIElement *childAgeMonthsTextField = app.textFields[@"Child Age (Months)"];
+[childAgeMonthsTextField tap];
+
+[moreNumbersKey tap];
+[childAgeMonthsTextField typeText:@"9"];
+
+XCUIElement *childWeightLbsTextField = app.textFields[@"Child Weight (lbs)"];
+[childWeightLbsTextField tap];
+
+[moreNumbersKey tap];
+[childWeightLbsTextField typeText:@"7"];
+
+XCUIElement *childSexTextField = app.textFields[@"Child Sex"];
+[childSexTextField tap];
+[shiftButton tap];
+[childSexTextField typeText:@"Male"];
+[[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+[app.buttons[@"Save"] tap];
+
+XCTAssertTrue(app.alerts[@"Saved"].exists);
+//    XCTAssertTrue([motherFirstNameTextField isEqual:@"amma"]);
+
 }
 
 -(void)testLoad{
@@ -106,62 +148,402 @@
     [emailTextField typeText:@"amma@example.com"];
     [app.buttons[@"Load"] tap];
     
-
+    XCTAssertTrue(app.alerts[@"Data Loaded"].exists);
+    
+    
 }
 
+-(void)testLatchView{
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    
+    XCUIElement *shiftButton = app.buttons[@"shift"];
+    [shiftButton tap];
+    [passwordSecureTextField typeText:@"Password"];
+    [shiftButton tap];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.tabBars.buttons[@"Latch Score"] tap];
+    [app.staticTexts[@"Latch"] tap];
+    
+    XCTAssertTrue(app.staticTexts[@"Latch"].exists);
+    
+}
 
-//-(void)testLoad {
-//    
+-(void)testLatchpick{
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    
+    XCUIElement *shiftButton = app.buttons[@"shift"];
+    [shiftButton tap];
+    [passwordSecureTextField typeText:@"Password"];
+    [shiftButton tap];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.tabBars.buttons[@"Latch Score"] tap];
+    [app.staticTexts[@"Latch"] tap];
+    
+    //XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.pickerWheels[@"No latch obtained"] tap];
+    [app.pickerWheels[@"None"] tap];
+    [app.pickerWheels[@"Inverted"] tap];
+    [app.pickerWheels[@"Engorged Cracked"] tap];
+    [app.buttons[@"Total"] tap];
+    
+    XCTAssertTrue(app.staticTexts[@"0"].exists);
+    
+}
+
+//-(void)testLatchpick2{
 //    
 //    XCUIApplication *app = [[XCUIApplication alloc] init];
-//    [app.buttons[@"Sign Up"] tap];
+//    XCUIElement *usernameTextField = app.textFields[@"Username"];
+//    [usernameTextField tap];
+//    [usernameTextField typeText:@"amma"];
+//    
+//    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+//    [passwordSecureTextField tap];
+//    
+//    XCUIElement *shiftButton = app.buttons[@"shift"];
+//    [shiftButton tap];
+//    [passwordSecureTextField typeText:@"Password"];
+//    [shiftButton tap];
+//    
+//    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+//    [moreNumbersKey tap];
+//    
+//    [passwordSecureTextField typeText:@"1"];
+//    [app.buttons[@"Login"] tap];
 //    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
 //    
-//    XCUIElement *emailTextField2 = app.textFields[@"Email"];
-//    [emailTextField2 tap];
-//    [emailTextField2 typeText:@"amma@example.com"];
+//    XCUIElement *emailTextField = app.textFields[@"Email"];
+//    [emailTextField tap];
+//    [emailTextField typeText:@"amma"];
+//    [moreNumbersKey tap];
+//    
+//    [emailTextField typeText:@"@"];
+//    
+//    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+//    [moreLettersKey tap];
+//    
+//    [emailTextField typeText:@"example"];
+//    [moreNumbersKey tap];
+//    
+//    [emailTextField typeText:@"."];
+//    [moreLettersKey tap];
+//    
+//    [emailTextField typeText:@"com"];
 //    [app.buttons[@"Load"] tap];
-//    //[app2.textFields[@"Mother First Name"] tap];
-//    XCUIElement *motherTextField = [app.otherElements containingType:XCUIElementTypeStaticText identifier:@"mother"];
-//    NSString *expectedString = @"amma";
-//    XCTAssertEqualObjects(expectedString, motherTextField,@"The reversed string did not match the expected reverse");
+//    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+//    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+//    [app.tabBars.buttons[@"Latch Score"] tap];
+//    [app.staticTexts[@"Latch"] tap];
+//    
+//    //XCUIApplication *app = [[XCUIApplication alloc] init];
+//    [app.pickerWheels[@"No latch obtained"] tap];
+//    [app.pickerWheels[@"Rhythmic suckling"] tap];
+//    [app.pickerWheels[@"None"] tap];
+//    [app.pickerWheels[@"Inverted"] tap];
+//    [app.pickerWheels[@"Engorged Cracked"] tap];
+//    [app.buttons[@"Total"] tap];
+//    
+//    XCTAssertTrue(app.staticTexts[@"2"].exists);
 //    
 //    
 ////    XCUIApplication *app = [[XCUIApplication alloc] init];
-////    XCUIElement *emailTextField = app.textFields[@"Email"];
-////    XCUIElement *motherTextField = app.textFields[@"Mother First Name"];
-////    [emailTextField Tap];
-////    [emailTextField typeText:@"amma@example.com"];
-////    [app.buttons[@"Load"] tap];
-////    //NSString *resultString = motherTextField;
-////    NSString *expectedString = @"amma";
-////    XCTAssertEqualObjects(expectedString, motherTextField,@"The reversed string did not match the expected reverse");
+////    [app.pickerWheels[@"No latch obtained"] tap];
+////    
+////    XCUIElement *repeatedAttemptsPickerWheel = app.pickerWheels[@"Repeated attempts"];
+////    [repeatedAttemptsPickerWheel tap];
+////    [repeatedAttemptsPickerWheel tap];
+////    [app.pickerWheels[@"Rhythmic suckling"] tap];
+////    [app.pickerWheels[@"None"] tap];
+////    [app.pickerWheels[@"A few with stimulation"] tap];
+////    [app.pickerWheels[@"Inverted"] tap];
+////    
+////    XCUIElement *flatPickerWheel = app.pickerWheels[@"Flat"];
+////    [flatPickerWheel tap];
+////    [flatPickerWheel tap];
+////    [app.pickerWheels[@"Engorged Cracked"] tap];
+////    [app.pickerWheels[@"Soft Tender Intact nipples"] tap];
+////    [app.pickerWheels[@"Full assist"] tap];
+////    [app.pickerWheels[@"Minimal assist"] tap];
+//    
 //    
 //}
 
+
+
 -(void)testWebView{
     
+    
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Sign Up"] tap];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [app.buttons[@"shift"] tap];
+    [passwordSecureTextField typeText:@"Password"];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
     [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
     [app.tabBars.buttons[@"More"] tap];
     [app.staticTexts[@"Frequently Asked Questions"] tap];
-    [app.staticTexts[@"Milk supply can be adversely affected by alcohol, cigarettes, over-the-counter cold remedies, antihistamines, decongestants, and hormone-based contraceptives."] swipeUp];
-    }
-
--(void)testEmail{
+    //[app.staticTexts[@"Avoid bottles and pacifiers until breastfeeding is well established (usually about 4 weeks)."] tap];
+    
+    
+    XCTAssertTrue(app.staticTexts[@"Avoid bottles and pacifiers until breastfeeding is well established (usually about 4 weeks)."].exists);
+    
+    
     
 }
 
--(void)testQuotes{
+
+
+-(void)testEmail{
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.buttons[@"Sign Up"] tap];
-    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
-    [app.tabBars.buttons[@"More"] tap];
-    [app.staticTexts[@"Quotes"] tap];
-    [app.tables.staticTexts[@"When you feel like quitting: think about why you started."] tap];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
     
-    }
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [app.buttons[@"shift"] tap];
+    [passwordSecureTextField typeText:@"Password"];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.tabBars.buttons[@"More"] tap];
+    
+    [app.staticTexts[@"Contact"] tap];
+
+    [[[XCUIApplication alloc] init].buttons[@"Contact Doctor"] tap];
+    
+    
+}
+
+-(void)testQuotesTrue{
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [app.buttons[@"shift"] tap];
+    [passwordSecureTextField typeText:@"Password"];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.tabBars.buttons[@"More"] tap];
+    
+    [app.staticTexts[@"Quotes"] tap];
+    //[app.tables.staticTexts[@"When you feel like quitting: think about why you started."] tap];
+    
+    XCTAssertTrue(app.staticTexts[@"Inspirational Quotes"].exists);
+    
+}
+
+-(void)testQuotesFalse{
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *usernameTextField = app.textFields[@"Username"];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"amma"];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [app.buttons[@"shift"] tap];
+    [passwordSecureTextField typeText:@"Password"];
+    
+    XCUIElement *moreNumbersKey = app.keys[@"more, numbers"];
+    [moreNumbersKey tap];
+    
+    [passwordSecureTextField typeText:@"1"];
+    [app.buttons[@"Login"] tap];
+    [app.alerts[@"Already Info Saved"].collectionViews.buttons[@"OK"] tap];
+    
+    XCUIElement *emailTextField = app.textFields[@"Email"];
+    [emailTextField tap];
+    [emailTextField typeText:@"amma"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"@"];
+    
+    XCUIElement *moreLettersKey = app.keys[@"more, letters"];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"example"];
+    [moreNumbersKey tap];
+    
+    [emailTextField typeText:@"."];
+    [moreLettersKey tap];
+    
+    [emailTextField typeText:@"com"];
+    [app.buttons[@"Load"] tap];
+    [app.alerts[@"Data Loaded"].collectionViews.buttons[@"OK"] tap];
+    [[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.tabBars.buttons[@"More"] tap];
+    
+    [app.staticTexts[@"Quotes"] tap];
+    //[app.tables.staticTexts[@"When you feel like quitting: think about why you started."] tap];
+    
+    XCTAssertFalse(app.staticTexts[@"Inspirational"].exists);
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 @end

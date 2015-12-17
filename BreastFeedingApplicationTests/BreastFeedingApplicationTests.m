@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
+
 @interface BreastFeedingApplicationTests : XCTestCase
 
 @end
@@ -17,6 +18,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
 }
 
 - (void)tearDown {
@@ -35,5 +37,10 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
+//-(void)testmotherload {
+//    SecondViewController *svc = [SecondViewController new];
+//    XCTAssertNoThrow([svc loadMother],@"loaddata shouldn't throw exceptions");
+//}
 
 @end

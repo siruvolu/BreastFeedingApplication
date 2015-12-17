@@ -17,4 +17,6 @@
 @property (strong, nonatomic) NSString *status;
 @property (nonatomic) sqlite3 *contactDB;
 
+@property (weak, nonatomic) IBOutlet UITextField *lemail;
+
 @end

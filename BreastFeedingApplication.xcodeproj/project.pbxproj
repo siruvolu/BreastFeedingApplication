@@ -17,6 +17,8 @@
 		47AB53731C21E1A700C5CF31 /* MasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53721C21E1A700C5CF31 /* MasterTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		47AB53761C21E1F500C5CF31 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53751C21E1F500C5CF31 /* Patient.m */; settings = {ASSET_TAGS = (); }; };
 		47AB53791C21E22900C5CF31 /* PatientDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53781C21E22900C5CF31 /* PatientDirectory.m */; settings = {ASSET_TAGS = (); }; };
+		47AB53811C22374600C5CF31 /* BreastFeedingApplicationSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53801C22374600C5CF31 /* BreastFeedingApplicationSampleTests.m */; };
+		47AB53891C223C7B00C5CF31 /* siruvoluTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB53881C223C7B00C5CF31 /* siruvoluTest.m */; settings = {ASSET_TAGS = (); }; };
 		80E1615A1BF9FAA0005460C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E161591BF9FAA0005460C7 /* main.m */; };
 		80E1615D1BF9FAA0005460C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615C1BF9FAA0005460C7 /* AppDelegate.m */; };
 		80E161601BF9FAA0005460C7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1615F1BF9FAA0005460C7 /* FirstViewController.m */; };
@@ -45,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		47AB53831C22374600C5CF31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E1614D1BF9FAA0005460C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80E161541BF9FAA0005460C7;
+			remoteInfo = BreastFeedingApplication;
+		};
 		80E161721BF9FAA1005460C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 80E1614D1BF9FAA0005460C7 /* Project object */;
@@ -79,6 +88,10 @@
 		47AB53751C21E1F500C5CF31 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		47AB53771C21E22900C5CF31 /* PatientDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDirectory.h; sourceTree = "<group>"; };
 		47AB53781C21E22900C5CF31 /* PatientDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDirectory.m; sourceTree = "<group>"; };
+		47AB537E1C22374500C5CF31 /* BreastFeedingApplicationSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreastFeedingApplicationSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47AB53801C22374600C5CF31 /* BreastFeedingApplicationSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreastFeedingApplicationSampleTests.m; sourceTree = "<group>"; };
+		47AB53821C22374600C5CF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47AB53881C223C7B00C5CF31 /* siruvoluTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = siruvoluTest.m; sourceTree = "<group>"; };
 		80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreastFeedingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E161591BF9FAA0005460C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80E1615B1BF9FAA0005460C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +143,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		47AB537B1C22374500C5CF31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80E161521BF9FAA0005460C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +178,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47AB537F1C22374500C5CF31 /* BreastFeedingApplicationSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				47AB53881C223C7B00C5CF31 /* siruvoluTest.m */,
+				47AB53801C22374600C5CF31 /* BreastFeedingApplicationSampleTests.m */,
+				47AB53821C22374600C5CF31 /* Info.plist */,
+			);
+			path = BreastFeedingApplicationSampleTests;
+			sourceTree = "<group>";
+		};
 		80E1614C1BF9FAA0005460C7 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +212,7 @@
 				80E161571BF9FAA0005460C7 /* BreastFeedingApplication */,
 				80E161741BF9FAA1005460C7 /* BreastFeedingApplicationTests */,
 				80E1617F1BF9FAA1005460C7 /* BreastFeedingApplicationUITests */,
+				47AB537F1C22374500C5CF31 /* BreastFeedingApplicationSampleTests */,
 				80E161561BF9FAA0005460C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,6 +223,7 @@
 				80E161551BF9FAA0005460C7 /* BreastFeedingApplication.app */,
 				80E161711BF9FAA1005460C7 /* BreastFeedingApplicationTests.xctest */,
 				80E1617C1BF9FAA1005460C7 /* BreastFeedingApplicationUITests.xctest */,
+				47AB537E1C22374500C5CF31 /* BreastFeedingApplicationSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +344,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		47AB537D1C22374500C5CF31 /* BreastFeedingApplicationSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47AB53871C22374600C5CF31 /* Build configuration list for PBXNativeTarget "BreastFeedingApplicationSampleTests" */;
+			buildPhases = (
+				47AB537A1C22374500C5CF31 /* Sources */,
+				47AB537B1C22374500C5CF31 /* Frameworks */,
+				47AB537C1C22374500C5CF31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47AB53841C22374600C5CF31 /* PBXTargetDependency */,
+			);
+			name = BreastFeedingApplicationSampleTests;
+			productName = BreastFeedingApplicationSampleTests;
+			productReference = 47AB537E1C22374500C5CF31 /* BreastFeedingApplicationSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		80E161541BF9FAA0005460C7 /* BreastFeedingApplication */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80E161851BF9FAA1005460C7 /* Build configuration list for PBXNativeTarget "BreastFeedingApplication" */;
@@ -374,6 +424,10 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Prateek Panjwani";
 				TargetAttributes = {
+					47AB537D1C22374500C5CF31 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 80E161541BF9FAA0005460C7;
+					};
 					80E161541BF9FAA0005460C7 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 4BQJ945BK2;
@@ -404,11 +458,19 @@
 				80E161541BF9FAA0005460C7 /* BreastFeedingApplication */,
 				80E161701BF9FAA1005460C7 /* BreastFeedingApplicationTests */,
 				80E1617B1BF9FAA1005460C7 /* BreastFeedingApplicationUITests */,
+				47AB537D1C22374500C5CF31 /* BreastFeedingApplicationSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		47AB537C1C22374500C5CF31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80E161531BF9FAA0005460C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +499,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		47AB537A1C22374500C5CF31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47AB53891C223C7B00C5CF31 /* siruvoluTest.m in Sources */,
+				47AB53811C22374600C5CF31 /* BreastFeedingApplicationSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80E161511BF9FAA0005460C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +559,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		47AB53841C22374600C5CF31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80E161541BF9FAA0005460C7 /* BreastFeedingApplication */;
+			targetProxy = 47AB53831C22374600C5CF31 /* PBXContainerItemProxy */;
+		};
 		80E161731BF9FAA1005460C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 80E161541BF9FAA0005460C7 /* BreastFeedingApplication */;
@@ -521,6 +597,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		47AB53851C22374600C5CF31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BreastFeedingApplicationSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = siruvolu.BreastFeedingApplicationSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreastFeedingApplication.app/BreastFeedingApplication";
+			};
+			name = Debug;
+		};
+		47AB53861C22374600C5CF31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BreastFeedingApplicationSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = siruvolu.BreastFeedingApplicationSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreastFeedingApplication.app/BreastFeedingApplication";
+			};
+			name = Release;
+		};
 		80E161831BF9FAA1005460C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -638,6 +740,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BreastFeedingApplicationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplicationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,6 +753,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BreastFeedingApplicationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.Gannon.BreastFeedingApplicationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -686,6 +790,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		47AB53871C22374600C5CF31 /* Build configuration list for PBXNativeTarget "BreastFeedingApplicationSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47AB53851C22374600C5CF31 /* Debug */,
+				47AB53861C22374600C5CF31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		80E161501BF9FAA0005460C7 /* Build configuration list for PBXProject "BreastFeedingApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -33,11 +33,16 @@
 @property (strong, nonatomic) NSString *status;
 @property (nonatomic) sqlite3 *contactDB;
 
+@property (nonatomic, retain) NSString *stremail;
+@property (nonatomic, retain) NSString *strmother;
+
 - (IBAction)BackTap:(id)sender;
 
 
 
-
+- (void)saveData;
+- (void)loadMother;
+-(void)loadtable;
 
 
 //- (IBAction)submitfrnew:(id)sender;

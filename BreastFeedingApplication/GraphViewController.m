@@ -24,12 +24,7 @@
     //UITabBarController *myNavController = (UITabBarController *)viewControllers[2];
     
     //self.latchVC = (LatchViewController *) [tabBarController.viewControllers objectAtIndex:1];
-    //In our example here, we only have 2 view controllers (A and B)
-    //So, index 1 is where controller B resides.
-    
-    
-    
-    
+   
     
     [self.view addSubview:[self chart1]];
     
@@ -45,7 +40,7 @@
 #pragma mark - Creating the charts
 
 -(LineChart*)chart1 {
-    // Generating some dummy data
+    
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:10];
     
     for(int i=0;i<10;i++) {

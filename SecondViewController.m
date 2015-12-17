@@ -12,10 +12,11 @@
 #import "GraphViewController.h"
 
 @interface SecondViewController ()
-
--(void)loadInfoToEdit;
 - (void)saveData;
 - (void)loadMother;
+-(void)loadtable;
+
+
 @end
 
 @implementation SecondViewController
@@ -34,42 +35,7 @@
             [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
             [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
             [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
-    
-    NSString *docsDir;
-    NSArray *dirPaths;
-    
-    // Get the documents directory
-    dirPaths = NSSearchPathForDirectoriesInDomains(
-                                                   NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    docsDir = dirPaths[0];
-    
-    // Build the path to the database file
-    _databasePath = [[NSString alloc]
-                     initWithString: [docsDir stringByAppendingPathComponent:
-                                      @"bf.db"]];
-    
-    NSFileManager *filemgr = [NSFileManager defaultManager];
-    
-    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
-    {
-        const char *dbpath = [_databasePath UTF8String];
-        
-        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
-        {
-            char *errMsg;
-            const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS MOTHER (ID INTEGER PRIMARY KEY AUTOINCREMENT, MFNAME TEXT, MLNAME TEXT, MAGE TEXT, ADDRESS TEXT, CAGE TEXT, CWEIGHT TEXT, CSEX TEXT, EMAIL TEXT)";
-            
-            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
-            {
-                NSLog(@"Failed to create table");
-            }
-            sqlite3_close(_contactDB);
-        } else {
-            NSLog(@"Failed to open/create database");
-        }
-    }
+    [self loadtable];
     
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Already Info Saved" message:@"Enter the email to load data" preferredStyle:UIAlertControllerStyleAlert];
     
@@ -102,6 +68,8 @@
     //
     //            [self.navigationController pushViewController:graphViewController animated:YES];
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,8 +98,33 @@
     
     GraphViewController *graphViewController = [[GraphViewController alloc] init];
     graphViewController.stremail = _emailid.text; // Set the exposed property
-    
     [self.navigationController pushViewController:graphViewController animated:YES];
+    
+    if([_mothername.text isEqualToString:@""] || [_motherlast.text isEqualToString:@""] || [_motherdob.text isEqualToString:@""] || [_motherpob.text isEqualToString:@""] || [_childdob.text isEqualToString:@""] || [_childwt.text isEqualToString:@""]|| [_chsex.text isEqualToString:@""] || [_emailid.text isEqualToString:@""])
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ATLERT" message:@"Records not found." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+    }
+    
+    else{
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Data Loaded" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
+        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
+        
+      }
+
     
 }
 
@@ -163,26 +156,22 @@
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}];
         
         [alert addAction:defaultAction];
-        
-        //To disable tab bars
-//        [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
-//        [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
-//        [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:FALSE];
-//        [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:FALSE];
         [self presentViewController:alert animated:YES completion:nil];
         
-        
-        
-    }
-    
-    else{
-        //NSLog(@"Password Match");
+    }else{
         [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:TRUE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:TRUE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:3]setEnabled:TRUE];
         [[[[self.tabBarController tabBar]items]objectAtIndex:4]setEnabled:TRUE];
         //[self Submituser];
         [self saveData];
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Saved" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
+            
+            [alert addAction:defaultAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         
     }
     
@@ -311,6 +300,7 @@
 
 - (void)loadMother{
     {
+        self.stremail = _emailid.text;
         const char *dbpath = [_databasePath UTF8String];
         sqlite3_stmt    *statement;
         
@@ -326,7 +316,7 @@
             
             NSString *querySQL = [NSString stringWithFormat:
                                   @"SELECT mfname, mlname, mage, address, cage, cweight, csex FROM mother WHERE email=\"%@\"",
-                                  _emailid.text];
+                                  self.stremail];
             
             const char *query_stmt = [querySQL UTF8String];
             
@@ -366,17 +356,57 @@
                                            sqlite3_column_text(statement, 5)];
                     
                     _chsex.text = csexField;
+                    
+                    self.strmother = self.mothername.text;
+                    
                     NSLog(@"Match found");
                 } else {
                     NSLog(@"Match not found");
-                    //                _address.text = @"";
-                    //                _phone.text = @"";
                 }
                 sqlite3_finalize(statement);
             }
             sqlite3_close(_contactDB);
         }
     }}
+
+-(void)loadtable {
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = dirPaths[0];
+    
+    // Build the path to the database file
+    _databasePath = [[NSString alloc]
+                     initWithString: [docsDir stringByAppendingPathComponent:
+                                      @"bf.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
+    {
+        const char *dbpath = [_databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt =
+            "CREATE TABLE IF NOT EXISTS MOTHER (ID INTEGER PRIMARY KEY AUTOINCREMENT, MFNAME TEXT, MLNAME TEXT, MAGE TEXT, ADDRESS TEXT, CAGE TEXT, CWEIGHT TEXT, CSEX TEXT, EMAIL TEXT)";
+            
+            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                NSLog(@"Failed to create table");
+            }
+            sqlite3_close(_contactDB);
+        } else {
+            NSLog(@"Failed to open/create database");
+        }
+    }
+
+}
 
 - (IBAction)BackTap:(id)sender {
     

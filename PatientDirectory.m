@@ -70,7 +70,7 @@ static NSString *patientFileName = @"Patient.data";
 }
 
 - (void)loadModelFromFile {
-    NSURL *url = [self urlForDataFile];
+    //NSURL *url = [self urlForDataFile];
     
     //NSMutableArray *pat =
     NSArray *Pat = [NSKeyedUnarchiver unarchiveObjectWithFile:@"Users/panjwani001/Desktop/Patientname.docx"];

@@ -33,12 +33,10 @@
 //}
 
 -(void)contactDoctor:(id)sender{
-   
-    
-    // Email Subject
-    NSString *emailTitle = @"Test Email";
+   // Email Subject
+    NSString *emailTitle = @"Contact Request Email";
     // Email Content
-    NSString *messageBody = @"<h1>Learning iOS Programming!</h1>"; // Change the message body to HTML
+    NSString *messageBody = @"<h1>I would like to request!</h1>"; // Change the message body to HTML
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"siruvolu@icloud.com"];
     
@@ -50,12 +48,6 @@
     
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
-    
-    
-    
-
-    
-    
 }
 
 
@@ -71,9 +63,9 @@
    
     
     // Email Subject
-    NSString *emailTitle = @"Test Email";
+    NSString *emailTitle = @"Contact Request Email";
     // Email Content
-    NSString *messageBody = @"<h1>Learning iOS Programming!</h1>"; // Change the message body to HTML
+    NSString *messageBody = @"<h1>I would like to request!</h1>"; // Change the message body to HTML
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"siruvolu@icloud.com"];
     
@@ -98,9 +90,9 @@
     //[self presentModalViewController:mailComposer animated:YES];
     
     // Email Subject
-    NSString *emailTitle = @"Test Email";
+    NSString *emailTitle = @"Contact Request Email";
     // Email Content
-    NSString *messageBody = @"<h1>Learning iOS Programming!</h1>"; // Change the message body to HTML
+    NSString *messageBody = @"<h1>I would like to request!"; // Change the message body to HTML
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"siruvolu@icloud.com"];
     

@@ -23,9 +23,10 @@
 @property NSArray *lScale, *aScale, *tScale, *cScale, *hScale;
 
 @property (weak, nonatomic) IBOutlet UILabel *totalScore;
-@property (weak, nonatomic) IBOutlet UITextField *lemail;
+//@property (weak, nonatomic) IBOutlet UITextField *lemail;
 
 - (void)saveData;
+- (void)loadtable;
 @end
 
 @implementation LatchViewController
@@ -235,50 +236,9 @@
     //
     //    self.hScale = @[@"Full assist (staff holds infant at breast)",@"Minimal assist (i.e. elevate head of bed, place pillows) Teach one side, mother does other. Staff help, mother takes over feeding",@"No assist from staff. Mother able to position/hold infant."];
     
-    NSString *docsDir;
-    NSArray *dirPaths;
+    [self loadtable];
     
-    // Get the documents directory
-    dirPaths = NSSearchPathForDirectoriesInDomains(
-                                                   NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    docsDir = dirPaths[0];
-    
-    // Build the path to the database file
-    _databasePath = [[NSString alloc]
-                     initWithString: [docsDir stringByAppendingPathComponent:
-                                      @"bf.db"]];
-    
-    NSFileManager *filemgr = [NSFileManager defaultManager];
-    
-    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
-    {
-        const char *dbpath = [_databasePath UTF8String];
         
-        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
-        {
-            char *errMsg;
-            const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS LATCH (ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT, LSCORE INTEGER)";
-            
-            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
-            {
-                NSLog(@"Failed to create table");
-            }
-            sqlite3_close(_contactDB);
-        } else {
-            NSLog(@"Failed to open/create database");
-        }
-    }
-    
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Before starting!" message:@"Enter the email to store data" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {}];
-    
-    [alert addAction:defaultAction];
-    
-    [self presentViewController:alert animated:YES completion:nil];
-    
     SecondViewController *svc = (SecondViewController *)[self.tabBarController.viewControllers objectAtIndex:0];
     _lemail.text = svc.emailid.text;
     
@@ -366,8 +326,7 @@
                     NSLog(@"Match found");
                 } else {
                     NSLog(@"Match not found");
-                    //                _address.text = @"";
-                    //                _phone.text = @"";
+                    
                 }
                 sqlite3_finalize(statement);
             }
@@ -375,5 +334,43 @@
         }
     }}
 
+-(void)loadtable {
+    
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = dirPaths[0];
+    
+    // Build the path to the database file
+    _databasePath = [[NSString alloc]
+                     initWithString: [docsDir stringByAppendingPathComponent:
+                                      @"bf.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: _databasePath ] == NO)
+    {
+        const char *dbpath = [_databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt =
+            "CREATE TABLE IF NOT EXISTS LATCH (ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT, LSCORE INTEGER)";
+            
+            if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                NSLog(@"Failed to create table");
+            }
+            sqlite3_close(_contactDB);
+        } else {
+            NSLog(@"Failed to open/create database");
+        }
+    }
 
+}
 @end

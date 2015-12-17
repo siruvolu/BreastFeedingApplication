@@ -62,10 +62,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"PatientDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Patient *_patientDisplay = [self.patientDisplay getPatientAtIndex:indexPath.row];
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //Patient *_patientDisplay = [self.patientDisplay getPatientAtIndex:indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setPatientdetail:_patientDisplay];
+        //[controller setPatientdetail:_patientDisplay];
         [controller setDelegate:self];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
