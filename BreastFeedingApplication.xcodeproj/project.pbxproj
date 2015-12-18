@@ -44,6 +44,9 @@
 		DD685B211C19D2D10017CA9D /* docloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1C1C19D2D10017CA9D /* docloginViewController.m */; };
 		DD685B221C19D2D10017CA9D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B1E1C19D2D10017CA9D /* LoginViewController.m */; };
 		DD685B231C19D2D10017CA9D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD685B201C19D2D10017CA9D /* SecondViewController.m */; };
+		DDA97D6F1C238BCA00F4E9C0 /* LoginTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA97D6E1C238BCA00F4E9C0 /* LoginTest.m */; settings = {ASSET_TAGS = (); }; };
+		DDA97D711C238BF700F4E9C0 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA97D701C238BF700F4E9C0 /* Login.m */; settings = {ASSET_TAGS = (); }; };
+		DDA97D731C238C1600F4E9C0 /* Signup.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA97D721C238C1600F4E9C0 /* Signup.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +143,9 @@
 		DD685B1E1C19D2D10017CA9D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		DD685B1F1C19D2D10017CA9D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
 		DD685B201C19D2D10017CA9D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
+		DDA97D6E1C238BCA00F4E9C0 /* LoginTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTest.m; sourceTree = "<group>"; };
+		DDA97D701C238BF700F4E9C0 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		DDA97D721C238C1600F4E9C0 /* Signup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +280,7 @@
 			children = (
 				80E161751BF9FAA1005460C7 /* BreastFeedingApplicationTests.m */,
 				80E161771BF9FAA1005460C7 /* Info.plist */,
+				DDA97D6E1C238BCA00F4E9C0 /* LoginTest.m */,
 			);
 			path = BreastFeedingApplicationTests;
 			sourceTree = "<group>";
@@ -284,6 +291,8 @@
 				80E161801BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m */,
 				80E161821BF9FAA1005460C7 /* Info.plist */,
 				47AB536C1C20D31C00C5CF31 /* svcLoad.m */,
+				DDA97D701C238BF700F4E9C0 /* Login.m */,
+				DDA97D721C238C1600F4E9C0 /* Signup.m */,
 			);
 			path = BreastFeedingApplicationUITests;
 			sourceTree = "<group>";
@@ -544,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E161761BF9FAA1005460C7 /* BreastFeedingApplicationTests.m in Sources */,
+				DDA97D6F1C238BCA00F4E9C0 /* LoginTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +561,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA97D711C238BF700F4E9C0 /* Login.m in Sources */,
+				DDA97D731C238C1600F4E9C0 /* Signup.m in Sources */,
 				47AB536D1C20D31C00C5CF31 /* svcLoad.m in Sources */,
 				80E161811BF9FAA1005460C7 /* BreastFeedingApplicationUITests.m in Sources */,
 			);
@@ -797,6 +809,7 @@
 				47AB53861C22374600C5CF31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80E161501BF9FAA0005460C7 /* Build configuration list for PBXProject "BreastFeedingApplication" */ = {
 			isa = XCConfigurationList;
