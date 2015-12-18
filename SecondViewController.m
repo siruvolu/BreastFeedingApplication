@@ -27,9 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //NSLog(@"Your data: %@", _struser);
-    //     self.emailid.text = self.struser;
-    //    NSLog(@"Your data: %@", self.emailid.text);
+
     
             [[[[self.tabBarController tabBar]items]objectAtIndex:1]setEnabled:FALSE];
             [[[[self.tabBarController tabBar]items]objectAtIndex:2]setEnabled:FALSE];
